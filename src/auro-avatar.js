@@ -19,20 +19,41 @@ import styleCss from "./style-css.js";
 /**
  * auro-avatar provides users a way to ...
  *
- * @attr {String} cssClass - Applies designated CSS class to DOM element.
+ * @attr {Boolean} ariaVisible - description ...
+ * @attr {String} alt - Provide text for element alt text
+ * @attr {String} code - Provide airport code for requested airport image
+ * @attr {String} img - Provide location or URL for image to be used
+ * @slot - Slot element is used in this component
  */
 
 // build the component class
 class AuroAvatar extends LitElement {
-  // constructor() {
-  //   super();
-  // }
+  constructor() {
+    super();
+
+    this.alt = ``;
+    this.ariaVisible = null;
+  }
 
   // function to define props used within the scope of this component
   static get properties() {
     return {
       // ...super.properties,
-      cssClass:   { type: String }
+      ariaVisible: {
+        type: Boolean
+      },
+      code: {
+        type: String,
+        reflect: true
+      },
+      img: {
+        type: String,
+        reflect: true
+      },
+      alt: {
+        type: String,
+        reflect: true
+      }
     };
   }
 
@@ -42,15 +63,36 @@ class AuroAvatar extends LitElement {
     `;
   }
 
+  /**
+   * @private Function for the purpose of determining aria-hidden value based on attribute setting
+   * @returns {string} - Returns true or false
+   */
+  aria() {
+    return this.ariaVisible ? 'false' : 'true';
+  }
+
+  /**
+   * @private Function for the purpose of determining image src string
+   * @param {string} imageType - passed in value to determine image output
+   * @returns {string} - Returns pre-defined string or free text
+   */
+  imageSrc(imageType) {
+    if (imageType) {
+      return `https://resource.alaskaair.net/-/media/images/pages/serve-manage/${this.code}`
+    } else if (!imageType && this.img) {
+      return this.img
+    }
+
+    return `https://resource.alaskaair.net/-/media/images/pages/serve-manage/sea`
+  }
+
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
   // aria-hidden="${this.hideAudible(this.hiddenAudible)}"
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-      <div class=${this.cssClass}>
-        <slot></slot>
-      </div>
+      <img alt=${this.alt} src=${this.imageSrc(this.code)} aria-hidden="${this.aria()}">
     `;
   }
 }
