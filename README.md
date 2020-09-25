@@ -39,7 +39,7 @@ import "@alaskaairux/auro-avatar";
 **Reference component in HTML**
 
 ```html
-<auro-avatar>Hello World</auro-avatar>
+<auro-avatar code="sea"></auro-avatar>
 ```
 
 ## Install bundled assets from CDN
@@ -65,20 +65,12 @@ The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to 
 **Displaimer:** While these components are supported in IE, there may be issues with loading the [web components polyfill](https://www.webcomponents.org/polyfills). Please consult their documentation when supporting IE11.
 
 
-## auro-avatar use cases
-
-The `<auro-avatar>` element should be used in situations where users may:
-
-* ...
-* ...
-* ...
-
 ## API Code Examples
 
 Default auro-avatar
 
 ```html
-<auro-avatar>Hello World</auro-avatar>
+<auro-avatar code="sea"></auro-avatar>
 ```
 
 ## Development
