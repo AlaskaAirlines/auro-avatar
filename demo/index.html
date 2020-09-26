@@ -12,6 +12,9 @@
       import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
       import '@polymer/iron-demo-helpers/demo-snippet';
     </script>
+    <script type="module">
+      import '@alaskaairux/auro-icon';
+    </script>
     <script type="module" src="../src/auro-avatar.js"></script>
     <custom-style>
       <style is="custom-style" include="demo-pages-shared-styles"></style>
@@ -23,43 +26,103 @@
     <div class="vertical-section-container">
       <h1>auro-avatar</h1>
 
+      <h3>Default avatar - no image or icon set</h3>
       <demo-snippet>
         <template>
           <auro-avatar></auro-avatar>
-          <auro-avatar alt="this is am image of star wars" img="https://images.foxtv.com/static.fox10phoenix.com/www.fox10phoenix.com/content/uploads/2019/11/764/432/GETTY-star-wars-112719.jpg?ve=1&tl=1"></auro-avatar>
-          <auro-avatar code="anc" rounded></auro-avatar>
-          <auro-avatar code="dtw" circle></auro-avatar>
-          <auro-avatar code="psp" circle sm></auro-avatar>
+          <auro-avatar rounded></auro-avatar>
+          <auro-avatar circle></auro-avatar>
         </template>
       </demo-snippet>
+
+      <h3>Default avatar - no image or icon set, initials in slot</h3>
       <demo-snippet>
         <template>
-          <auro-avatar code="anc" alt="this is am image of star wars" img="https://images.foxtv.com/static.fox10phoenix.com/www.fox10phoenix.com/content/uploads/2019/11/764/432/GETTY-star-wars-112719.jpg?ve=1&tl=1"></auro-avatar>
+          <auro-avatar circle>DS</auro-avatar>
+          <auro-avatar sm>DS</auro-avatar>
+          <auro-avatar rounded sm>DS</auro-avatar>
+          <auro-avatar circle sm>DS</auro-avatar>
         </template>
       </demo-snippet>
+
+      <h3>Default avatar - no image or icon set, small avatar</h3>
+      <demo-snippet>
+        <template>
+          <auro-avatar sm></auro-avatar>
+          <auro-avatar rounded sm></auro-avatar>
+          <auro-avatar circle sm></auro-avatar>
+        </template>
+      </demo-snippet>
+
+      <h3>Avatar - airport code set, lg/small avatar</h3>
+      <demo-snippet>
+        <template>
+          <auro-avatar code="pdx"></auro-avatar>
+          <auro-avatar code="lax" rounded></auro-avatar>
+          <auro-avatar code="anc" circle></auro-avatar>
+          <auro-avatar code="pdx" sm></auro-avatar>
+          <auro-avatar code="lax" rounded sm></auro-avatar>
+          <auro-avatar code="anc" circle sm></auro-avatar>
+        </template>
+      </demo-snippet>
+
+      <h3>Avatar - image set, lg/small avatar</h3>
+      <demo-snippet>
+        <template>
+          <auro-avatar img="https://bit.ly/3cxhHC1"></auro-avatar>
+          <auro-avatar img="https://bit.ly/3cxhHC1" rounded></auro-avatar>
+          <auro-avatar img="https://bit.ly/3cxhHC1" circle></auro-avatar>
+          <auro-avatar img="https://bit.ly/3cxhHC1" sm></auro-avatar>
+          <auro-avatar img="https://bit.ly/3cxhHC1" rounded sm></auro-avatar>
+          <auro-avatar img="https://bit.ly/3cxhHC1" circle sm></auro-avatar>
+        </template>
+      </demo-snippet>
+
+      <h3>Avatar - icon set in slot</h3>
+      <demo-snippet>
+        <template>
+          <auro-avatar>
+            <auro-icon category="interface" name="account-stroke"></auro-icon>
+          </auro-avatar>
+          <auro-avatar rounded>
+            <auro-icon category="interface" name="account-stroke"></auro-icon>
+          </auro-avatar>
+          <auro-avatar circle>
+            <auro-icon category="interface" name="account-stroke"></auro-icon>
+          </auro-avatar>
+        </template>
+      </demo-snippet>
+
+      <h3>Avatar - set in slot, sm</h3>
+      <demo-snippet>
+        <template>
+          <auro-avatar sm>
+            <auro-icon category="interface" name="account-stroke"></auro-icon>
+          </auro-avatar>
+          <auro-avatar rounded sm>
+            <auro-icon category="interface" name="account-stroke"></auro-icon>
+          </auro-avatar>
+          <auro-avatar circle sm>
+            <auro-icon category="interface" name="account-stroke"></auro-icon>
+          </auro-avatar>
+        </template>
+      </demo-snippet>
+
+      <h3>Avatar - Airport Code Examples</h3>
       <demo-snippet>
         <template>
           <auro-avatar code="sea"></auro-avatar>
-        </template>
-      </demo-snippet>
-      <demo-snippet>
-        <template>
           <auro-avatar code="anc" rounded></auro-avatar>
+          <auro-avatar code="psp" circle></auro-avatar>
         </template>
       </demo-snippet>
+
+      <h3>Avatar - Airport Code Examples, sm</h3>
       <demo-snippet>
         <template>
-          <auro-avatar code="dtw" circle></auro-avatar>
-        </template>
-      </demo-snippet>
-      <demo-snippet>
-        <template>
+          <auro-avatar code="sea" sm></auro-avatar>
+          <auro-avatar code="anc" rounded sm></auro-avatar>
           <auro-avatar code="psp" circle sm></auro-avatar>
-        </template>
-      </demo-snippet>
-      <demo-snippet>
-        <template>
-          <auro-avatar code="psp" circle ariaVisible></auro-avatar>
         </template>
       </demo-snippet>
     </div>

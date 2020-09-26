@@ -6,13 +6,13 @@ auro-avatar provides users a way to ...
 
 | Property      | Attribute     | Type      | Default | Description                                      |
 |---------------|---------------|-----------|---------|--------------------------------------------------|
-| `alt`         | `alt`         | `String`  | ""      | Provide text for element alt text                |
-| `ariaVisible` | `ariaVisible` | `Boolean` | null    | description ...                                  |
-| `code`        | `code`        | `String`  |         | Provide airport code for requested airport image |
-| `img`         | `img`         | `String`  |         | Provide location or URL for image to be used     |
+| `alt`         | `alt`         | `String`  | ""      | provide string for element alt text              |
+| `ariaVisible` | `ariaVisible` | `Boolean` | null    | true value reveals content to screen reader      |
+| `code`        | `code`        | `String`  |         | provide airport code for requested airport image |
+| `img`         | `img`         | `String`  |         | provide location or URL for image to be used     |
 
 ## Slots
 
-| Name | Description                            |
-|------|----------------------------------------|
-|      | Slot element is used in this component |
+| Name | Description                                |
+|------|--------------------------------------------|
+|      | Unnamed slot design for use with auro-icon |

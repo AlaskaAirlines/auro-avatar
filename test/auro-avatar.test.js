@@ -30,7 +30,7 @@ describe('auro-avatar', () => {
 
   it('sets auro-avatar alt text', async () => {
     const el = await fixture(html`
-      <auro-avatar alt="this is an image"></auro-avatar>
+      <auro-avatar img="https://bit.ly/3jaGMoE" alt="this is an image"></auro-avatar>
     `);
 
     const root = el.shadowRoot;
@@ -50,9 +50,22 @@ describe('auro-avatar', () => {
     await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/images/pages/serve-manage/mke");
   });
 
+  it('sets auro-avatar with icon', async () => {
+    const el = await fixture(html`
+      <auro-avatar>
+        <auro-icon category="interface" name="location-stroke"></auro-icon>
+      </auro-avatar>
+    `);
+
+    const root = el.shadowRoot;
+    const div = root.querySelector('div');
+
+    await expect(div.className).to.equal("slot");
+  });
+
   it('sets auro-avatar to aria-hidden="false"', async () => {
     const el = await fixture(html`
-    <auro-avatar ariaVisible></auro-avatar>
+      <auro-avatar img="https://bit.ly/3jaGMoE" ariaVisible></auro-avatar>
     `);
 
     const root = el.shadowRoot;
