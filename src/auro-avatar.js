@@ -5,7 +5,6 @@
 
 // If use litElement base class
 import { LitElement, html, css } from "lit-element";
-import '@alaskaairux/auro-icon';
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
@@ -24,7 +23,6 @@ import styleCss from "./style-css.js";
  * @attr {String} alt - provide string for element alt text
  * @attr {String} code - provide airport code for requested airport image
  * @attr {String} img - provide location or URL for image to be used
- * @slot - Unnamed slot design for use with auro-icon
  */
 
 // build the component class
@@ -84,7 +82,7 @@ class AuroAvatar extends LitElement {
       return this.img
     }
 
-    return null
+    return `https://resource.alaskaair.net/-/media/images/pages/serve-manage/sea`
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
@@ -93,18 +91,7 @@ class AuroAvatar extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-
-      ${this.code || this.img
-        ? html`
-          <img alt=${this.alt} src=${this.imageSrc(this.code)} aria-hidden="${this.aria()}">
-        `
-        : html`
-        <div class="slot" aria-hidden="true">
-          <slot>
-            <auro-icon category="in-flight" name="seat"></auro-icon>
-          </slot>
-        </div>`
-      }
+      <img alt=${this.alt} src=${this.imageSrc(this.code)} aria-hidden="${this.aria()}">
     `;
   }
 }

@@ -5,7 +5,15 @@ import '../src/auro-avatar.js';
 describe('auro-avatar', () => {
   it('auro-avatar is accessible', async () => {
     const el = await fixture(html`
-      <auro-avatar code="mke"></auro-avatar>
+    <auro-avatar></auro-avatar>
+    `);
+
+    await expect(el).to.be.accessible();
+  });
+
+  it('auro-avatar is more accessible', async () => {
+    const el = await fixture(html`
+    <auro-avatar code="psp" sm ariaVisible alt="this is a stock image of Palm Springs"></auro-avatar>
     `);
 
     await expect(el).to.be.accessible();
@@ -48,19 +56,6 @@ describe('auro-avatar', () => {
     const img = root.querySelector('img');
 
     await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/images/pages/serve-manage/mke");
-  });
-
-  it('sets auro-avatar with icon', async () => {
-    const el = await fixture(html`
-      <auro-avatar>
-        <auro-icon category="interface" name="location-stroke"></auro-icon>
-      </auro-avatar>
-    `);
-
-    const root = el.shadowRoot;
-    const div = root.querySelector('div');
-
-    await expect(div.className).to.equal("slot");
   });
 
   it('sets auro-avatar to aria-hidden="false"', async () => {
