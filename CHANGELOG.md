@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.2](https://github.com/AlaskaAirlines/auro-avatar/compare/v1.0.1...v1.0.2) (2020-10-31)
+
+
+### Bug Fixes
+
+* update auro-icon dependency ([7c76877](https://github.com/AlaskaAirlines/auro-avatar/commit/7c768771a55f698a18322d77cf9f227c744fde8c))
+
 ## [1.0.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v1.0.0...v1.0.1) (2020-10-30)
 
 
