@@ -55,7 +55,7 @@ describe('auro-avatar', () => {
     const root = el.shadowRoot;
     const img = root.querySelector('img');
 
-    await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/images/pages/serve-manage/mke");
+    await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/Images/common-assets/destinations/360x360/mke");
   });
 
   it('sets auro-avatar to aria-hidden="false"', async () => {
