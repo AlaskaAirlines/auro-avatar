@@ -77,12 +77,12 @@ class AuroAvatar extends LitElement {
    */
   imageSrc(imageType) {
     if (imageType) {
-      return `https://resource.alaskaair.net/-/media/images/pages/serve-manage/${this.code}`
+      return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/360x360/${this.code}`
     } else if (!imageType && this.img) {
       return this.img
     }
 
-    return `https://resource.alaskaair.net/-/media/images/pages/serve-manage/sea`
+    return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/360x360/sea`
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
