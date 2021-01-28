@@ -22,7 +22,8 @@
 // never define layout that would cause effect on element outside the scope of this component
 
 :host {
-  --sml: 3.75rem;
+  --sm: 3.75rem;
+  --md: 6rem;
   --lg: 8.375rem;
 }
 
@@ -37,8 +38,13 @@
 }
 
 :host([sm]) {
-  width: var(--sml);
-  height: var(--sml);
+  width: var(--sm);
+  height: var(--sm);
+}
+
+:host([md]) {
+  width: var(--md);
+  height: var(--md);
 }
 
 img {
@@ -46,4 +52,45 @@ img {
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+// -=-=-=-=-=-=- for use with the tail icon =-=-=-=-=-=-=-=
+
+// No support for a small tail avatar
+:host([sm][tail]) {
+  display: none;
+}
+
+:host([md][tail]) {
+  width: var(--lg);
+
+  div {
+    width: var(--md);
+  }
+}
+
+:host([tail]) {
+  text-align: center;
+
+  p {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: linear-gradient(180deg, var(--auro-color-brand-midnight-200) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  auro-icon {
+    position: absolute;
+    width: 118%;
+    left: -25%;
+    top: -1%;
+  }
 }

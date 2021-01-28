@@ -19,11 +19,12 @@ The default component presents itself as a circle and default image placement.
 
 </auro-accordion>
 
-## Component size option
+## Component size options
 
-The auro-avatar component supports a sm avatar size.
+The auro-avatar component supports a `sm` and `md` avatar size.
 
 <div class="exampleWrapper">
+  <auro-avatar md></auro-avatar>
   <auro-avatar sm></auro-avatar>
 </div>
 
@@ -31,6 +32,7 @@ The auro-avatar component supports a sm avatar size.
   <span slot="trigger">See code</span>
 
   ```html
+  <auro-avatar md></auro-avatar>
   <auro-avatar sm></auro-avatar>
   ```
 
@@ -70,6 +72,47 @@ The auro-avatar supports placement of custom images using the `img` attribute.
   ```html
   <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
   <auro-avatar img="https://picsum.photos/200?random=1" sm></auro-avatar>
+  ```
+
+</auro-accordion>
+
+## Tail icon options
+
+The tail options allow for a default and a `md` size option. The `tail` property accepts the two letter code per the airline. See the [Github repo](https://github.com/AlaskaAirlines/Icons/tree/master/src/icons/logos) for a list of currently available logos.
+
+For the airline title, simply add content to the `display` slot. See the example code for the HTML API.
+
+<div class="exampleWrapper">
+  <auro-avatar tail="AS">
+    <span slot="display">Alaska Airlines</span>
+  </auro-avatar>
+  <auro-avatar tail="AA">
+    <span slot="display">American Airlines</span>
+  </auro-avatar>
+  <auro-avatar md tail="QF">
+    <span slot="display">Quantas</span>
+  </auro-avatar>
+  <auro-avatar md tail="JL">
+    <span slot="display">Japan Airlines</span>
+  </auro-avatar>
+</div>
+
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+  ```html
+  <auro-avatar tail="AS">
+    <span slot="display">Alaska Airlines</span>
+  </auro-avatar>
+  <auro-avatar tail="AA">
+    <span slot="display">American Airlines</span>
+  </auro-avatar>
+  <auro-avatar md tail="QF">
+    <span slot="display">Quantas</span>
+  </auro-avatar>
+  <auro-avatar md tail="JL">
+    <span slot="display">Japan Airlines</span>
+  </auro-avatar>
   ```
 
 </auro-accordion>

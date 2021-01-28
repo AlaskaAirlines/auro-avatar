@@ -5,6 +5,7 @@
 
 // If use litElement base class
 import { LitElement, html, css } from "lit-element";
+import '@alaskaairux/auro-icon/dist/auro-icon';
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
@@ -52,6 +53,9 @@ class AuroAvatar extends LitElement {
       alt: {
         type: String,
         reflect: true
+      },
+      tail: {
+        type: String
       }
     };
   }
@@ -85,14 +89,30 @@ class AuroAvatar extends LitElement {
     return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/360x360/sea`
   }
 
+  /**
+   * @private Function for the purpose of determining html template
+   * @param {string} templateType - passed in value to determine template output
+   * @returns {string} - Returns pre-defined DOM string
+   */
+  template() {
+    if (this.tail) {
+      return html`
+        <div>
+          <auro-icon customSize category="logos" name="tail-${this.tail}"></auro-icon>
+        </div>
+        <p><slot name="display"></slot></p>
+      `;
+    }
+
+    return html`<img alt=${this.alt} src=${this.imageSrc(this.code)} aria-hidden="${this.aria()}">`;
+  }
+
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
   // aria-hidden="${this.hideAudible(this.hiddenAudible)}"
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
-    return html`
-      <img alt=${this.alt} src=${this.imageSrc(this.code)} aria-hidden="${this.aria()}">
-    `;
+    return this.template();
   }
 }
 
