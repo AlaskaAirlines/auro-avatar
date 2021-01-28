@@ -1,80 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Auro Web Component Generator | auro-avatar custom element</title>
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module">
-      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-      import '@polymer/iron-demo-helpers/demo-snippet';
-    </script>
-    <script type="module" src="../src/auro-avatar.js"></script>
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles"></style>
-    </custom-style>
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../node_modules/prismjs/themes/prism.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
-    <div class="vertical-section-container">
-      <h1>auro-avatar</h1>
+    <main></main>
 
-      <h3>Default avatar - no image or icon set</h3>
-      <demo-snippet>
-        <template>
-          <auro-avatar></auro-avatar>
-        </template>
-      </demo-snippet>
-
-      <h3>Default avatar - no image or icon set, small avatar</h3>
-      <demo-snippet>
-        <template>
-          <auro-avatar sm></auro-avatar>
-        </template>
-      </demo-snippet>
-
-      <h3>Avatar - airport code set, small avatar</h3>
-      <demo-snippet>
-        <template>
-          <auro-avatar code="msp"></auro-avatar>
-          <auro-avatar code="pdx" sm></auro-avatar>
-        </template>
-      </demo-snippet>
-
-      <h3>Avatar - image set, small avatar</h3>
-      <demo-snippet>
-        <template>
-          <auro-avatar img="https://bit.ly/3cxhHC1"></auro-avatar>
-          <auro-avatar img="https://bit.ly/3cxhHC1" sm></auro-avatar>
-        </template>
-      </demo-snippet>
-
-
-      <h3>Avatar - Airport Code Examples</h3>
-      <demo-snippet>
-        <template>
-          <auro-avatar code="mke"></auro-avatar>
-        </template>
-      </demo-snippet>
-
-      <h3>Avatar - Airport Code Examples, sm</h3>
-      <demo-snippet>
-        <template>
-          <auro-avatar code="mke" sm></auro-avatar>
-        </template>
-      </demo-snippet>
-
-      <h3>Avatar - image with alt text and exposed to Aria</h3>
-      <demo-snippet>
-        <template>
-          <auro-avatar code="msp" sm alt="This will not be read by a screen reader"></auro-avatar>
-          <auro-avatar code="jfk" sm ariaVisible alt="this is a stock image of Palm Springs"></auro-avatar>
-        </template>
-      </demo-snippet>
-    </div>
+    <script type="module">
+      import 'marked/marked.min.js';
+      import 'prismjs';
+      fetch('/demo/demo.md')
+        .then((response) => response.text())
+        .then((text) => {
+          const rawHtml = marked(text);
+          document.querySelector('main').innerHTML = rawHtml;
+          Prism.highlightAll();
+        });
+    </script>
+    <script type="module" src="../src/auro-avatar.js"></script>
+    <script src="https://unpkg.com/@alaskaairux/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
   </body>
 </html>
