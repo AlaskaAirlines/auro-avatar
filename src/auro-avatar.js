@@ -100,7 +100,7 @@ class AuroAvatar extends LitElement {
         <div>
           <auro-icon customSize category="logos" name="tail-${this.tail}"></auro-icon>
         </div>
-        <p><slot name="display"></slot></p>
+        <slot name="display" class="tailTitle"></slot>
       `;
     }
 
