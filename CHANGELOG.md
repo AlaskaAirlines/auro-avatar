@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v2.0.0...v2.1.0) (2021-02-11)
+
+
+### Features
+
+* add support for avatar tail feature ([9a28150](https://github.com/AlaskaAirlines/auro-avatar/commit/9a2815089d7b7fc5dfccf16e5c1eb876dd143f2b))
+
 # [2.0.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v1.0.2...v2.0.0) (2020-12-23)
 
 
