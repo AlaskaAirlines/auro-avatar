@@ -24,6 +24,7 @@ import styleCss from "./style-css.js";
  * @attr {String} alt - provide string for element alt text
  * @attr {String} code - provide airport code for requested airport image
  * @attr {String} img - provide location or URL for image to be used
+ * @attr {String} tail - provide tail logo for requested airline
  */
 
 // build the component class
