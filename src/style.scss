@@ -4,14 +4,14 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
-@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
+@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
 
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/core";
+@import './../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
+@import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
 
 // Support for auroElement styles
-// @import "./node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement";
+// @import './../node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
 
 // container styles - defines the look of the outer custom component
 // :host {
@@ -21,13 +21,18 @@
 // layout styles - define any layout specifications for UI that is contained WITHIN the component
 // never define layout that would cause effect on element outside the scope of this component
 
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 :host {
   --sm: 3.75rem;
   --md: 6rem;
   --lg: 8.375rem;
-}
 
-:host {
   display: inline-block;
   width: var(--lg);
   height: var(--lg);
@@ -47,28 +52,9 @@
   height: var(--md);
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 // -=-=-=-=-=-=- for use with the tail icon =-=-=-=-=-=-=-=
 
 // No support for a small tail avatar
-:host([sm][tail]) {
-  display: none;
-}
-
-:host([md][tail]) {
-  width: var(--lg);
-
-  div {
-    width: var(--md);
-  }
-}
-
 :host([tail]) {
   text-align: center;
 
@@ -78,20 +64,32 @@ img {
   }
 
   div {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    background: linear-gradient(180deg, var(--auro-color-brand-midnight-200) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, var(--auro-color-brand-midnight-200) 0%, rgba(255 255 255 / .9) 100%);
     border-radius: 50%;
-    overflow: hidden;
-    position: relative;
   }
 
   auro-icon {
     position: absolute;
-    width: 118%;
-    left: -25%;
     top: -1%;
+    left: -25%;
+    width: 118%;
+  }
+}
+
+:host([sm][tail]) {
+  display: none;
+}
+
+:host([md][tail]) {
+  width: var(--lg);
+
+  div {
+    width: var(--md);
   }
 }
 
