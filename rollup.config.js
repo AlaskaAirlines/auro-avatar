@@ -53,13 +53,4 @@ const modernConfig = {
   ]
 };
 
-const auroAvatarConfig = {
-  input: 'src/es5.js',
-  output: {
-    format: 'iife',
-    file: 'dist/auro-avatar__bundled.es5.js'
-  },
-  plugins: getSharedPlugins(true)
-};
-
-export default [modernConfig, auroAvatarConfig];
+export default [modernConfig];
