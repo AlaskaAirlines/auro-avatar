@@ -42,12 +42,14 @@ img {
   }
 }
 
-:host([sm]) {
+:host([sm]),
+:host([type='sm']) {
   width: var(--sm);
   height: var(--sm);
 }
 
-:host([md]) {
+:host([md]),
+:host([type='md']) {
   width: var(--md);
   height: var(--md);
 }
@@ -81,10 +83,13 @@ img {
   }
 }
 
+// maintaining boolean attr for backwards compatibility
+:host([type='sm'][tail]),
 :host([sm][tail]) {
   display: none;
 }
 
+:host([type='md'][tail]),
 :host([md][tail]) {
   width: var(--lg);
 

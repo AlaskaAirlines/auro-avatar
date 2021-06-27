@@ -57,6 +57,9 @@ class AuroAvatar extends LitElement {
       },
       tail: {
         type: String
+      },
+      type: {
+        type: String
       }
     };
   }
@@ -75,6 +78,24 @@ class AuroAvatar extends LitElement {
     return this.ariaVisible ? 'false' : 'true';
   }
 
+  imageSize(type) {
+    let output = '';
+
+    switch (type) {
+      case `sm`:
+        output = '180x180';
+        break;
+      case 'lg':
+        output = '800x800';
+        break;
+      default:
+        output = '360x360';
+        break;
+    }
+
+    return output;
+  }
+
   /**
    * @private Function for the purpose of determining image src string
    * @param {string} imageType - passed in value to determine image output
@@ -82,7 +103,7 @@ class AuroAvatar extends LitElement {
    */
   imageSrc(imageType) {
     if (imageType) {
-      return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/360x360/${this.code}`
+      return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/${this.code}`
     } else if (!imageType && this.img) {
       return this.img
     }
