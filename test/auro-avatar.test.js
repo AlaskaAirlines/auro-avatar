@@ -4,7 +4,7 @@ import '../src/auro-avatar.js';
 describe('auro-avatar', () => {
   it('auro-avatar is accessible', async () => {
     const el = await fixture(html`
-    <auro-avatar></auro-avatar>
+    <auro-avatar type="lg" code="psp"></auro-avatar>
     `);
 
     await expect(el).to.be.accessible();
@@ -12,7 +12,7 @@ describe('auro-avatar', () => {
 
   it('auro-avatar is more accessible', async () => {
     const el = await fixture(html`
-    <auro-avatar code="psp" sm ariaVisible alt="this is a stock image of Palm Springs"></auro-avatar>
+    <auro-avatar code="psp" type="md" ariaVisible alt="this is a stock image of Palm Springs"></auro-avatar>
     `);
 
     await expect(el).to.be.accessible();
@@ -48,13 +48,26 @@ describe('auro-avatar', () => {
 
   it('sets auro-avatar with airport code image', async () => {
     const el = await fixture(html`
-      <auro-avatar code="mke"></auro-avatar>
+      <auro-avatar type="sm" code="mke"></auro-avatar>
     `);
 
     const root = el.shadowRoot;
     const img = root.querySelector('img');
 
-    await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/Images/common-assets/destinations/360x360/mke");
+    await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/Images/common-assets/destinations/180x180/mke");
+  });
+
+  it('sets tail image', async () => {
+    const el = await fixture(html`
+      <auro-avatar type="md" tail="JL">
+        <span slot="display">Japan Airlines</span>
+      </auro-avatar>
+    `);
+
+    const root = el.shadowRoot;
+    const icon = root.querySelector('auro-icon').getAttribute('name');
+
+    await expect(icon).to.equal("tail-JL");
   });
 
   it('sets auro-avatar to aria-hidden="false"', async () => {
