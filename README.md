@@ -1,6 +1,6 @@
 # Avatar
 
-`<auro-avatar>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-avatar>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of displaying iconic imagery for representation.
 
 ## UI development browser support
 
@@ -39,7 +39,7 @@ import "@aurodesignsystem/auro-avatar";
 **Reference component in HTML**
 
 ```html
-<auro-avatar>Hello World</auro-avatar>
+<auro-avatar code="sea"></auro-avatar>
 ```
 
 ## Install bundled assets from CDN
@@ -60,20 +60,12 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 <script src="https://unpkg.com/@alaskaairux/auro-avatar@latest/dist/auro-avatar__bundled.es5.js" nomodule></script>
 ```
 
-## auro-avatar use cases
-
-The `<auro-avatar>` element should be used in situations where users may:
-
-* ...
-* ...
-* ...
-
 ## API Code Examples
 
 Default auro-avatar
 
 ```html
-<auro-avatar>Hello World</auro-avatar>
+<auro-avatar type="md" code="sea"></auro-avatar>
 ```
 
 ## Development
