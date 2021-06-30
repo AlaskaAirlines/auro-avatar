@@ -21,11 +21,11 @@ The default component presents itself as a circle and default image placement.
 
 ## Component size options
 
-The auro-avatar component supports a `sm`, `md` and `lg` avatar types that determines the size of the image asset delivered.</br>
+The auro-avatar component supports a `sm`, `md` and `lg` avatar types that determines the size of the image asset delivered. The assumed default is `lg`.</br>
 <small>Note: The previous `sm` and `md` boolean attributes are deprecated.</small>
 
 <div class="exampleWrapper">
-  <auro-avatar type="lg" code="boi"></auro-avatar>
+  <auro-avatar code="boi"></auro-avatar>
   <auro-avatar type="md" code="anc"></auro-avatar>
   <auro-avatar type="sm" code="mke"></auro-avatar>
 </div>
@@ -34,7 +34,7 @@ The auro-avatar component supports a `sm`, `md` and `lg` avatar types that deter
   <span slot="trigger">See code</span>
 
   ```html
-  <auro-avatar type="lg" code="boi"></auro-avatar>
+  <auro-avatar code="boi"></auro-avatar>
   <auro-avatar type="md" code="anc"></auro-avatar>
   <auro-avatar type="sm" code="mke"></auro-avatar>
   ```
@@ -46,7 +46,7 @@ The auro-avatar component supports a `sm`, `md` and `lg` avatar types that deter
 The auro-avatar supports placement of custom images using the `img` attribute.
 
 <div class="exampleWrapper">
-  <auro-avatar img="https://picsum.photos/200?random=0" type="lg"></auro-avatar>
+  <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
   <auro-avatar img="https://picsum.photos/200?random=1" type="md"></auro-avatar>
   <auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
 </div>
@@ -55,7 +55,7 @@ The auro-avatar supports placement of custom images using the `img` attribute.
   <span slot="trigger">See code</span>
 
   ```html
-  <auro-avatar img="https://picsum.photos/200?random=0" type="lg"></auro-avatar>
+  <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
   <auro-avatar img="https://picsum.photos/200?random=1" type="md"></auro-avatar>
   <auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
   ```
@@ -73,7 +73,7 @@ For the airline title, simply add content to the `display` slot. See the example
   <auro-avatar tail="AS">
     <span slot="display">Alaska Airlines</span>
   </auro-avatar>
-  <auro-avatar tail="AA" type="lg">
+  <auro-avatar tail="AA">
     <span slot="display">American Airlines</span>
   </auro-avatar>
   <auro-avatar type="md" tail="QF">
@@ -91,7 +91,7 @@ For the airline title, simply add content to the `display` slot. See the example
   <auro-avatar tail="AS">
     <span slot="display">Alaska Airlines</span>
   </auro-avatar>
-  <auro-avatar tail="AA" type="lg">
+  <auro-avatar tail="AA">
     <span slot="display">American Airlines</span>
   </auro-avatar>
   <auro-avatar type="md" tail="QF">

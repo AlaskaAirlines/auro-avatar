@@ -25,6 +25,7 @@ import styleCss from "./style-css.js";
  * @attr {String} code - provide airport code for requested airport image
  * @attr {String} img - provide location or URL for image to be used
  * @attr {String} tail - provide tail logo for requested airline
+ * @attr {String} type - modifiers for size of avatar (sm | md)
  */
 
 // build the component class
@@ -78,6 +79,11 @@ class AuroAvatar extends LitElement {
     return this.ariaVisible ? 'false' : 'true';
   }
 
+  /**
+   * @private
+   * @param {string} type - Determines size of image asset to show
+   * @returns {string} - Returns true or false
+   */
   imageSize(type) {
     let output = '';
 
@@ -85,11 +91,11 @@ class AuroAvatar extends LitElement {
       case `sm`:
         output = '180x180';
         break;
-      case 'lg':
-        output = '800x800';
+      case 'md':
+        output = '360x360';
         break;
       default:
-        output = '360x360';
+        output = '800x800';
         break;
     }
 
@@ -108,7 +114,7 @@ class AuroAvatar extends LitElement {
       return this.img
     }
 
-    return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/360x360/sea`
+    return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/sea`
   }
 
   /**

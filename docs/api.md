@@ -11,10 +11,4 @@ auro-avatar provides users a way to ...
 | `code`        | `code`        | `String`  |         | provide airport code for requested airport image |
 | `img`         | `img`         | `String`  |         | provide location or URL for image to be used     |
 | `tail`        | `tail`        | `String`  |         | provide tail logo for requested airline          |
-| `type`        | `type`        | `string`  |         |                                                  |
-
-## Methods
-
-| Method      | Type                  |
-|-------------|-----------------------|
-| `imageSize` | `(type: any): string` |
+| `type`        | `type`        | `String`  |         | modifiers for size of avatar (sm \| md)          |
