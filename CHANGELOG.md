@@ -1,5 +1,25 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v2.1.0...v3.0.0) (2021-07-13)
+
+
+### Code Refactoring
+
+* **migrate:** address post-migration issues ([831ea0e](https://github.com/AlaskaAirlines/auro-avatar/commit/831ea0e9166f664b074b9c38bbaa6b0483ee66f0))
+
+
+### Features
+
+* **lg:** update to have more robust API [#6](https://github.com/AlaskaAirlines/auro-avatar/issues/6) ([c1e18f8](https://github.com/AlaskaAirlines/auro-avatar/commit/c1e18f8187fd0f15301bf497661d57096f74dfae))
+
+
+### BREAKING CHANGES
+
+* **migrate:** This and the previous commits
+are considered breaking changes due to the
+reassignment of the new @aurodesignsystem
+npm namespace.
+
 # [2.1.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v2.0.0...v2.1.0) (2021-02-11)
 
 
