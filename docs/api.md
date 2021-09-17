@@ -1,6 +1,6 @@
 # auro-avatar
 
-auro-avatar provides users a way to ...
+Custom element for the purpose of displaying an avatar image.
 
 ## Properties
 

@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [4.0.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v3.0.0...v4.0.0) (2021-09-17)
+
+
+### chore
+
+* **deps:** update majro, minor and patch updates ([b1c13fa](https://github.com/AlaskaAirlines/auro-avatar/commit/b1c13fa81d07305068050c76e1e5fd1246aae86f))
+
+
+### BREAKING CHANGES
+
+* **deps:** Official new relesae was never delivered,
+triggering new build
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v2.1.0...v3.0.0) (2021-07-13)
 
 
