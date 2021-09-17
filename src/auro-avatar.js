@@ -18,7 +18,7 @@ import styleCss from "./style-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * auro-avatar provides users a way to ...
+ * Custom element for the purpose of displaying an avatar image.
  *
  * @attr {Boolean} ariaVisible - true value reveals content to screen reader
  * @attr {String} alt - provide string for element alt text
@@ -72,8 +72,8 @@ class AuroAvatar extends LitElement {
   }
 
   /**
-   * @private Function for the purpose of determining aria-hidden value based on attribute setting
-   * @returns {string} - Returns true or false
+   * @private
+   * @returns {string} - Returns true or false.
    */
   aria() {
     return this.ariaVisible ? 'false' : 'true';
@@ -81,8 +81,8 @@ class AuroAvatar extends LitElement {
 
   /**
    * @private
-   * @param {string} type - Determines size of image asset to show
-   * @returns {string} - Returns true or false
+   * @param {string} type - Determines size of image asset to show.
+   * @returns {string} - Returns true or false.
    */
   imageSize(type) {
     let output = '';
@@ -103,24 +103,23 @@ class AuroAvatar extends LitElement {
   }
 
   /**
-   * @private Function for the purpose of determining image src string
-   * @param {string} imageType - passed in value to determine image output
-   * @returns {string} - Returns pre-defined string or free text
+   * @private
+   * @param {string} imageType - Passed in value to determine image output.
+   * @returns {string} - Returns pre-defined string or free text.
    */
   imageSrc(imageType) {
     if (imageType) {
-      return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/${this.code}`
+      return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/${this.code}`;
     } else if (!imageType && this.img) {
-      return this.img
+      return this.img;
     }
 
-    return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/sea`
+    return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/sea`;
   }
 
   /**
-   * @private Function for the purpose of determining html template
-   * @param {string} templateType - passed in value to determine template output
-   * @returns {string} - Returns pre-defined DOM string
+   * @private
+   * @returns {string} - Returns pre-defined DOM string.
    */
   template() {
     if (this.tail) {
