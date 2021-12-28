@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.1.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.0.0...v4.1.0) (2021-12-28)
+
+
+### Features
+
+* **reflected attrs:** tail is a reflected attribute [#19](https://github.com/AlaskaAirlines/auro-avatar/issues/19) ([f26add3](https://github.com/AlaskaAirlines/auro-avatar/commit/f26add3f83e89cbfda1f4779d35645cab806431c))
+
 # [4.0.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v3.0.0...v4.0.0) (2021-09-17)
 
 
