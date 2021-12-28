@@ -57,7 +57,8 @@ class AuroAvatar extends LitElement {
         reflect: true
       },
       tail: {
-        type: String
+        type: String,
+        reflect: true
       },
       type: {
         type: String
