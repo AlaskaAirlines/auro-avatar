@@ -57,6 +57,18 @@ describe('auro-avatar', () => {
     await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/Images/common-assets/destinations/180x180/mke");
   });
 
+
+  it('sets auro-avatar with default fallback when using invalid airport code', async () => {
+    const el = await fixture(html`
+      <auro-avatar code="invalid"></auro-avatar>
+    `);
+
+    const root = el.shadowRoot;
+    const img = root.querySelector('img');
+
+    await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/Images/common-assets/destinations/800x800/partner");
+  });
+
   it('sets tail image', async () => {
     const el = await fixture(html`
       <auro-avatar type="md" tail="JL">
