@@ -105,17 +105,45 @@ class AuroAvatar extends LitElement {
 
   /**
    * @private
+   * @param {string} url - The URL to get status for.
+   * @returns {number} - Returns an http status code.
+   */
+  urlStatus(url) {
+    try {
+      const http = new XMLHttpRequest();
+      http.open('HEAD', url, false);
+      http.send();
+      return http.status;
+    } catch (err) {
+      // if the http.send() fails for any reason return `404` code
+      const errorCode = 404;
+      return errorCode;
+    }
+  }
+
+  /**
+   * @private
    * @param {string} imageType - Passed in value to determine image output.
    * @returns {string} - Returns pre-defined string or free text.
    */
   imageSrc(imageType) {
+    let url = `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/partner`;
+
     if (imageType) {
-      return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/${this.code}`;
+      // when airport `code` attribute is declared
+      url = `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/${this.code}`;
+
+      const errorCodes = [404]; // eslint-disable-line no-magic-numbers
+
+      if (errorCodes.includes(this.urlStatus(url))) {
+        url = `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/partner`;
+      }
     } else if (!imageType && this.img) {
-      return this.img;
+      // when no airport `code` but we have an `img` attribute declared
+      url = this.img;
     }
 
-    return `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/sea`;
+    return url;
   }
 
   /**

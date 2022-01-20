@@ -120,3 +120,20 @@ The auro-avatar component is hidden from screen readers by default. The placemen
   ```
 
 </auro-accordion>
+
+## Fallback Images
+
+The auro-avatar component will use a fallback image if a `code` value results in an avatar image that fails to load.
+
+<div class="exampleWrapper">
+  <auro-avatar code="INVALID"></auro-avatar>
+</div>
+
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+  ```html
+  <auro-avatar code="INVALID"></auro-avatar>
+  ```
+
+</auro-accordion>
