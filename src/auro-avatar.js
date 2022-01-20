@@ -23,6 +23,7 @@ import styleCss from "./style-css.js";
  * @attr {Boolean} ariaVisible - true value reveals content to screen reader
  * @attr {String} alt - provide string for element alt text
  * @attr {String} code - provide airport code for requested airport image
+ * @attr {String} httpStatus - provides the http status code for the initially declared airport code
  * @attr {String} img - provide location or URL for image to be used
  * @attr {String} tail - provide tail logo for requested airline
  * @attr {String} type - modifiers for size of avatar (sm | md)
@@ -35,6 +36,7 @@ class AuroAvatar extends LitElement {
 
     this.alt = ``;
     this.ariaVisible = null;
+    this.httpStatus = null;
   }
 
   // function to define props used within the scope of this component
@@ -62,6 +64,10 @@ class AuroAvatar extends LitElement {
       },
       type: {
         type: String
+      },
+      httpStatus: {
+        type: String,
+        reflect: true
       }
     };
   }
@@ -109,16 +115,21 @@ class AuroAvatar extends LitElement {
    * @returns {number} - Returns an http status code.
    */
   urlStatus(url) {
+    let statusCode = null;
+
     try {
       const http = new XMLHttpRequest();
       http.open('HEAD', url, false);
       http.send();
-      return http.status;
+      statusCode = http.status;
     } catch (err) {
       // if the http.send() fails for any reason return `404` code
       const errorCode = 404;
-      return errorCode;
+      statusCode = errorCode;
     }
+
+    this.httpStatus = statusCode;
+    return statusCode;
   }
 
   /**
