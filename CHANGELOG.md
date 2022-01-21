@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [4.2.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.1.0...v4.2.0) (2022-01-21)
+
+
+### Features
+
+* **fallback:** new fallback image for invalid airport codes ([b18f99c](https://github.com/AlaskaAirlines/auro-avatar/commit/b18f99caa927a7dc878b751b3d7254c22990fcd2))
+* **httpstatus:** support exposing http status of airport code image URL ([f24e285](https://github.com/AlaskaAirlines/auro-avatar/commit/f24e2859852bf05191fdda6678d26d7fc272cba6))
+
+
+### Reverts
+
+* Revert "feat(httpstatus): support exposing http status of airport code image URL" ([44da0a1](https://github.com/AlaskaAirlines/auro-avatar/commit/44da0a194b022112aeeabd1056fdef409e2409e9))
+
 # [4.1.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.0.0...v4.1.0) (2021-12-28)
 
 
