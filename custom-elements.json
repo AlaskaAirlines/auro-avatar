@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "dist/auro-avatar.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Custom element for the purpose of displaying an avatar image.",
+          "name": "AuroAvatar",
+          "members": [
+            {
+              "kind": "method",
+              "name": "aria",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "imageSize",
+              "parameters": [
+                {
+                  "name": "type",
+                  "description": "Determines size of image asset to show.",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "urlStatus",
+              "parameters": [
+                {
+                  "name": "url",
+                  "description": "The URL to get status for.",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "number"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "imageSrc",
+              "parameters": [
+                {
+                  "name": "imageType",
+                  "description": "Passed in value to determine image output.",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "template",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "default": "``",
+              "privacy": "public",
+              "attribute": "alt",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "ariaVisible",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "privacy": "public",
+              "attribute": "ariaVisible"
+            },
+            {
+              "kind": "field",
+              "name": "code",
+              "privacy": "public",
+              "attribute": "code",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "img",
+              "privacy": "public",
+              "attribute": "img",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "tail",
+              "privacy": "public",
+              "attribute": "tail",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "privacy": "public",
+              "attribute": "type"
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "Boolean"
+              },
+              "description": "true value reveals content to screen reader",
+              "name": "ariaVisible",
+              "fieldName": "ariaVisible"
+            },
+            {
+              "type": {
+                "text": "String"
+              },
+              "description": "provide string for element alt text",
+              "name": "alt",
+              "fieldName": "alt"
+            },
+            {
+              "type": {
+                "text": "String"
+              },
+              "description": "provide airport code for requested airport image",
+              "name": "code",
+              "fieldName": "code"
+            },
+            {
+              "type": {
+                "text": "String"
+              },
+              "description": "provide location or URL for image to be used",
+              "name": "img",
+              "fieldName": "img"
+            },
+            {
+              "type": {
+                "text": "String"
+              },
+              "description": "provide tail logo for requested airline",
+              "name": "tail",
+              "fieldName": "tail"
+            },
+            {
+              "type": {
+                "text": "String"
+              },
+              "description": "modifiers for size of avatar (sm | md)",
+              "name": "type",
+              "fieldName": "type"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "auro-avatar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "auro-avatar",
+          "declaration": {
+            "name": "AuroAvatar",
+            "module": "dist/auro-avatar.js"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -41,6 +41,7 @@
     "@babel/runtime": "^7.15.4",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@custom-elements-manifest/analyzer": "^0.5.7",
     "@open-wc/testing": "^2.5.33",
     "@rollup/plugin-alias": "^3.1.5",
     "@rollup/plugin-babel": "^5.3.0",
@@ -54,6 +55,7 @@
     "@webcomponents/webcomponentsjs": "^2.6.0",
     "autoprefixer": "^10.3.4",
     "babel-loader": "^8.2.2",
+    "cem-plugin-reactify": "^0.0.2",
     "compression": "^1.7.4",
     "concat": "^1.0.3",
     "copyfiles": "^2.4.1",
@@ -169,6 +171,8 @@
     "sweep": "rm -rf ./demo/css ./dist | rm ./src/*.css ./src/*-css.js",
     "test": "wtr --coverage",
     "test:watch": "wtr --watch",
-    "prepare": "husky install"
-  }
+    "prepare": "husky install",
+    "cem": "cem analyze --config 'custom-elements-manifest.config.mjs'"
+  },
+  "customElements": "custom-elements.json"
 }
