@@ -134,7 +134,12 @@ class AuroAvatar extends LitElement {
       // when airport `code` attribute is declared
       url = `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/${this.code}`;
 
-      const errorCodes = [404]; // eslint-disable-line no-magic-numbers
+      /* eslint-disable no-magic-numbers */
+      const errorCodes = [
+        403,
+        404
+      ];
+      /* eslint-enable no-magic-numbers */
 
       if (errorCodes.includes(this.urlStatus(url))) {
         url = `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/partner`;
