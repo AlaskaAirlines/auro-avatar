@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [4.2.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.2.0...v4.2.1) (2022-12-01)
+
+
+### Bug Fixes
+
+* **fallback:** check for 403 http status code for fallback image [#28](https://github.com/AlaskaAirlines/auro-avatar/issues/28) ([81e724e](https://github.com/AlaskaAirlines/auro-avatar/commit/81e724eaa2a59f56f18d571e9425ba2ce85f8456))
+* **properties:** enable reflect on 'type' attribute [#26](https://github.com/AlaskaAirlines/auro-avatar/issues/26) ([03435d2](https://github.com/AlaskaAirlines/auro-avatar/commit/03435d2684385d331f62e24694a5fccfc02f5946))
+
 # [4.2.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.1.0...v4.2.0) (2022-01-21)
 
 
