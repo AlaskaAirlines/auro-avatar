@@ -23,7 +23,7 @@ cssFiles.map(name => fs.readFile(`src/${name}.css`, (err, css) => {
     .then(result => {
       fs.writeFile(`src/${name}.css`, result.css, () => true)
       if ( result.map ) {
-        fs.writeFile(`src/${name}.map`, result.map, () => true)
+        fs.writeFile(`src/${name}.map`, String(result.map), () => true)
       }
     })
   }));
@@ -50,7 +50,7 @@ cssFixedFiles.map(name => fs.readFile(`src/${name}.css`, (err, css) => {
     .then(result => {
       fs.writeFile(`src/${name}.css`, result.css, () => true)
       if ( result.map ) {
-        fs.writeFile(`src/${name}.map`, result.map, () => true)
+        fs.writeFile(`src/${name}.map`, String(result.map), () => true)
       }
     })
   });
