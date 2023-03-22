@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.2.2](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.2.1...v4.2.2) (2023-03-22)
+
+
+### Performance Improvements
+
+* **ie:** remove additional legacy resources ([14402d7](https://github.com/AlaskaAirlines/auro-avatar/commit/14402d7f62bb4520b339fb76be4ab5f9b32db61f))
+
 ## [4.2.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.2.0...v4.2.1) (2022-12-01)
 
 
