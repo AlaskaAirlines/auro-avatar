@@ -46,7 +46,7 @@
     "@semantic-release/npm": "^9.0.2",
     "@web/dev-server": "^0.1.35",
     "@web/test-runner": "^0.15.0",
-    "@webcomponents/webcomponentsjs": "^2.7.0",
+    "@webcomponents/webcomponentsjs": "^2.8.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
     "compression": "^1.7.4",
