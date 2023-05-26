@@ -42,23 +42,27 @@ import "@aurodesignsystem/auro-avatar";
 <auro-avatar code="sea"></auro-avatar>
 ```
 
-## Install bundled assets from CDN
+## CDN Use
 
-In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-avatar__bundled.js` for modern browsers and `auro-avatar__bundled.es5.js` for legacy browsers (including IE11).
+In cases where the project is not able to process JS assets, there are pre-processed assets available for use.
 
-Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
+### Install
 
-### Bundle example code
+Include the following example HTML code in the `<head>` element of your page.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/essentials.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-avatar@latest/dist/auro-avatar__bundled.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-avatar@latest/dist/auro-avatar__bundled.es5.js" nomodule></script>
+```
 
 **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
 
-```html
-<link rel="stylesheet" href="https://unpkg.com/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/essentials.css" />
+### polyfills.js
 
-<script src="https://unpkg.com/@aurodesignsystem/auro-avatar@latest/dist/auro-avatar__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@aurodesignsystem/auro-avatar@latest/dist/auro-avatar__bundled.es5.js" nomodule></script>
-```
+The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to load a polyfill per component. The `polyfills.js` will work for all additional components added to the project.
 
 ## API Code Examples
 
@@ -76,17 +80,21 @@ Please be sure to review the [contribution guidelines](https://auro.alaskaair.co
 
 ### Start development environment
 
-Once the project has been cloned to your local resource and you have installed all the dependencies you will need to open two different shell sessions. One is for the **npm tasks**, the second is to run the **server**.
+Once the project has been cloned to your local resource and you have installed all the dependencies you will need to open a shell session to run the **dev server**.
 
 ```shell
 // shell terminal one
 $ npm run dev
-
-// shell terminal two
-$ npm run serve
 ```
 
 Open [localhost:8000](http://localhost:8000/)
+
+If running separate sessions is preferred, please run the following commands in individual terminal shells.
+
+```shell
+$ npm run build:watch
+$ npm run serve
+```
 
 ### API generation
 
