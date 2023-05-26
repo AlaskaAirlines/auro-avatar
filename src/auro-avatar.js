@@ -12,8 +12,6 @@ import '@alaskaairux/auro-icon/dist/auro-icon';
 // import { html, css } from "lit";
 // import AuroElement from '@alaskaairux/orion-web-core-style-sheets/dist/auroElement/auroElement';
 
-// Import touch detection lib
-import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
