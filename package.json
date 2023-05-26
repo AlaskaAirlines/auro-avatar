@@ -17,6 +17,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
+    "@types/node": "^20.2.4",
     "chalk": "^4.1.2",
     "lit": "^2.7.4"
   },
@@ -77,6 +78,7 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.21.0",
+    "typescript": "^5.0.4",
     "wc-sass-render": "^1.4.0",
     "web-component-analyzer": "^1.1.6",
     "whatwg-fetch": "^3.6.2",
@@ -133,7 +135,7 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render dist:js build:api bundler postinstall test",
+    "build": "npm-run-all build:sass sass:render dist:js build:api bundler postinstall test types",
     "build:ci": "npm-run-all sweep build",
     "build:api": "wca analyze 'src/auro-avatar.js' --outFiles docs/api.md",
     "build:demo": "npm-run-all build demo:rm:build demo:new:build demo:copy:index demo:copy:demo demo:update:index",
@@ -161,6 +163,7 @@
     "sweep": "rm -rf ./demo/css ./dist | rm ./src/*.css ./src/*-css.js",
     "test": "wtr --coverage",
     "test:watch": "wtr --watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "types": "tsc"
   }
 }
