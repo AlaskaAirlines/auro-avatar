@@ -27,7 +27,7 @@ import styleCss from "./style-css.js";
  */
 
 // build the component class
-class AuroAvatar extends LitElement {
+export class AuroAvatar extends LitElement {
   constructor() {
     super();
 
