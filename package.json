@@ -17,7 +17,6 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "@types/node": "^20.2.4",
     "chalk": "^5.2.0",
     "lit": "^2.7.4"
   },
@@ -43,6 +42,7 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^10.0.3",
+    "@types/node": "^20.2.4",
     "@web/dev-server": "^0.2.1",
     "@web/test-runner": "^0.16.1",
     "autoprefixer": "^10.4.14",
