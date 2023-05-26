@@ -4,12 +4,12 @@
 // ---------------------------------------------------------------------
 
 // If use litElement base class
-import { LitElement, html, css } from "lit-element";
+import { LitElement, html, css } from "lit";
 import '@alaskaairux/auro-icon/dist/auro-icon';
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
-// import { html, css } from "lit-element";
+// import { html, css } from "lit";
 // import AuroElement from '@alaskaairux/orion-web-core-style-sheets/dist/auroElement/auroElement';
 
 // Import touch detection lib
@@ -178,8 +178,7 @@ class AuroAvatar extends LitElement {
   }
 }
 
-/* istanbul ignore else */
-// define the name of the custom component
+// default internal definition
 if (!customElements.get("auro-avatar")) {
   customElements.define("auro-avatar", AuroAvatar);
 }
