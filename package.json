@@ -18,14 +18,12 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@types/node": "^20.2.4",
-    "chalk": "^4.1.2",
+    "chalk": "^5.2.0",
     "lit": "^2.7.4"
   },
   "peerDependencies": {
     "@alaskaairux/design-tokens": "^3.3.0",
-    "@alaskaairux/icons": "^4.7.0",
-    "@webcomponents/webcomponentsjs": "^2.5.0",
-    "focus-visible": "^5.2.0"
+    "@alaskaairux/icons": "^4.7.0"
   },
   "devDependencies": {
     "@alaskaairux/auro-icon": "^3.4.0",
@@ -47,7 +45,6 @@
     "@semantic-release/npm": "^9.0.2",
     "@web/dev-server": "^0.1.35",
     "@web/test-runner": "^0.15.0",
-    "@webcomponents/webcomponentsjs": "^2.7.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
     "compression": "^1.7.4",
@@ -56,7 +53,6 @@
     "core-js": "^3.28.0",
     "eslint": "^8.34.0",
     "eslint-plugin-jsdoc": "^40.0.0",
-    "focus-visible": "^5.2.0",
     "husky": "^8.0.3",
     "lodash": "^4.17.21",
     "marked": "^4.2.12",
@@ -65,8 +61,6 @@
     "postcss": "^8.4.21",
     "postcss-custom-properties": "^13.1.3",
     "postcss-discard-comments": "^5.1.2",
-    "postcss-rem-to-pixel": "^4.1.2",
-    "postcss-remove-rules": "^1.0.0",
     "postcss-selector-replace": "^1.0.2",
     "prismjs": "^1.29.0",
     "rollup": "^3.23.0",
@@ -146,11 +140,6 @@
     "bundler": "rollup -c",
     "bundler:test": "rollup -c -w",
     "scssLint": "stylelint \"./src/**/*.scss\"",
-    "demo:copy:demo": "copyfiles -u 1 -V './demo/demo.md' ./build/demo",
-    "demo:copy:index": "copyfiles -u 1 -V './demo/index.html' ./build",
-    "demo:new:build": "mkdir ./build && mkdir ./build/css && mkdir ./build/demo",
-    "demo:rm:build": "rm -rf ./build",
-    "demo:update:index": "node ./scripts/prepForBuild",
     "dev": "npm run build:watch",
     "dist:js": "copyfiles -u 1 -V './src/**/*.js' ./dist",
     "esLint": "./node_modules/.bin/eslint src/**/*.js",
