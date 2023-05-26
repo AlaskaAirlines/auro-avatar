@@ -1,5 +1,5 @@
 import { fixture, html, expect } from '@open-wc/testing';
-import '../src/auro-avatar.js';
+import '../src/auro-avatar';
 
 describe('auro-avatar', () => {
   it('auro-avatar is accessible', async () => {
