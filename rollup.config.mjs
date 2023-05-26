@@ -5,7 +5,7 @@ const production = !process.env.ROLLUP_WATCH;
 
 const modernConfig = {
   input: {
-    ['auro-avatar__bundled']: './index.js',
+    'auro-avatar__bundled': './index.js',
   },
   output: {
     format: 'esm',
