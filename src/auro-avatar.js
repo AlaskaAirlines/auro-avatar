@@ -4,8 +4,8 @@
 // ---------------------------------------------------------------------
 
 // If use litElement base class
-import { LitElement, html, css } from "lit";
-import '@alaskaairux/auro-icon/dist/auro-icon';
+import { LitElement, html } from "lit";
+import '@aurodesignsystem/auro-icon';
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
@@ -66,9 +66,7 @@ export class AuroAvatar extends LitElement {
   }
 
   static get styles() {
-    return css`
-      ${styleCss}
-    `;
+    return [styleCss];
   }
 
   /**
