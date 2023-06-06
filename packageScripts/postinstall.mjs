@@ -21,7 +21,7 @@ console.log(chalk.hex('#f26135')(`
 ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ──────────────────────────────╮
 
         Thanks for installing the latest version
-                of `) + chalk.hex('#ffd200').bold(`auro-flightline v${pjson.version}.`) + chalk.hex('#f26135')(`
+                of `) + chalk.hex('#ffd200').bold(`auro-avatar v${pjson.version}.`) + chalk.hex('#f26135')(`
 
 ╰─────────────────────────────── ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─╯
 `)
