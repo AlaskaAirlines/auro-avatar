@@ -103,13 +103,3 @@ The custom element API file is generated in the build and committed back to the 
 ### Testing
 
 Automated tests are required for every Auro component. See `.\test\auro-avatar.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.
-
-### Bundled assets
-
-Bundled assets are only generated in the remote and not merged back to this repo. To review and/or test a bundled asset locally, run `$ npm run bundler` to generate assets.
-
-### Demo deployment
-
-To deploy a demo version of the component for review, run `npm run build:demo` to create a `./build` directory that can be pushed to any static server.
-
-<small>Built from WC-Generator v3.6.2</small>
