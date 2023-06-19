@@ -17,12 +17,12 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "@aurodesignsystem/auro-icon": "^4.0.2",
     "chalk": "^5.2.0",
     "lit": "^2.7.5"
   },
   "peerDependencies": {
-    "@alaskaairux/design-tokens": "^3.3.0"
+    "@alaskaairux/design-tokens": "^3.3.0",
+    "@aurodesignsystem/auro-icon": "^4.0.2"
   },
   "devDependencies": {
     "@alaskaairux/design-tokens": "^3.13.0",
