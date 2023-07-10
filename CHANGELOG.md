@@ -1,5 +1,27 @@
 # Semantic Release Automated Changelog
 
+# [4.3.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.2.2...v4.3.0) (2023-07-10)
+
+
+### Bug Fixes
+
+* **postinstall:** renamed postinstall.js ([ab2fb58](https://github.com/AlaskaAirlines/auro-avatar/commit/ab2fb58de83bcd180de90bfd2f72461bb3815a68))
+
+
+### Features
+
+* **customize:** update component registration [#38](https://github.com/AlaskaAirlines/auro-avatar/issues/38) ([cbacf51](https://github.com/AlaskaAirlines/auro-avatar/commit/cbacf51afeee3995b59faa6175dccaf809406677))
+* **typescript:** add typescript support [#38](https://github.com/AlaskaAirlines/auro-avatar/issues/38) ([1b6038d](https://github.com/AlaskaAirlines/auro-avatar/commit/1b6038db71998280734ed774e2599a667964ae73))
+
+
+### Performance Improvements
+
+* **dev:** update run dev use single terminal ([13b6542](https://github.com/AlaskaAirlines/auro-avatar/commit/13b654293c0709e93e2c2414d4d8fc5590167ef9))
+* **legacy:** remove legacy build files & deps [#38](https://github.com/AlaskaAirlines/auro-avatar/issues/38) ([b0ee60c](https://github.com/AlaskaAirlines/auro-avatar/commit/b0ee60c8bb83fb2e667e19f1c2b321f6a356bed3))
+* **lit:** update to Lit2.0 [#38](https://github.com/AlaskaAirlines/auro-avatar/issues/38) ([434eb39](https://github.com/AlaskaAirlines/auro-avatar/commit/434eb3950ed08b0c2d75b236f1ad3b273dc7f108))
+* **postCss:** update script to match generator ([caa81de](https://github.com/AlaskaAirlines/auro-avatar/commit/caa81de3cdbafe043046d499dc8f8190d885b409))
+* update to gitignore & npmignore file [#37](https://github.com/AlaskaAirlines/auro-avatar/issues/37) ([f7ad30a](https://github.com/AlaskaAirlines/auro-avatar/commit/f7ad30aede7fa24274b04502bd89519d59840464))
+
 ## [4.2.2](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.2.1...v4.2.2) (2023-03-22)
 
 
