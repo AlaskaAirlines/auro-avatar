@@ -1,21 +1,18 @@
-const autoprefixer = require('autoprefixer')
-const postcss = require('postcss')
-const postcssCustomProperties = require('postcss-custom-properties')
-const comments = require('postcss-discard-comments')
-const fs = require('fs')
+const autoprefixer = require('autoprefixer');
+const postcss = require('postcss');
+const comments = require('postcss-discard-comments');
+const fs = require('fs');
 
-const cssFiles = ['style']
-
-cssFiles.map(name => fs.readFile(`src/${name}.css`, (err, css) => {
-  postcss([autoprefixer, postcssCustomProperties, comments])
+fs.readFile('src/style.css', (err, css) => {
+  postcss([autoprefixer, comments])
     .use(comments({
       remove: function(comment) { return comment[0] == "@"; }
     }))
-    .process(css, { from: `src/${name}.css`, to: `src/${name}.css` })
+    .process(css, { from: 'src/style.css', to: 'src/style.css' })
     .then(result => {
-      fs.writeFile(`src/${name}.css`, result.css, () => true)
+      fs.writeFile('src/style.css', result.css, () => true)
       if ( result.map ) {
-        fs.writeFile(`src/${name}.map`, String(result.map), () => true)
+        fs.writeFile('src/style.map', result.map, () => true)
       }
     })
-  }));
+});
