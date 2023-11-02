@@ -4,11 +4,14 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties';
 
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
+// Support for fallback values
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
+
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 
 // Support for auroElement styles
 // @import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
@@ -72,7 +75,7 @@ img {
     height: 100%;
     border-radius: 50%;
     margin: 0 auto;
-    background: linear-gradient(180deg, var(--auro-color-brand-midnight-200) 0%, rgba(255 255 255 / .9) 100%);
+    background: linear-gradient(180deg, var(--ds-color-brand-midnight-200, $ds-color-brand-midnight-200) 0%, rgba(255 255 255 / .9) 100%);
   }
 
   auro-icon {
@@ -100,5 +103,5 @@ img {
 
 .tailTitle {
   display: block;
-  margin: var(--auro-size-sm) 0;
+  margin: var(--ds-size-150, $ds-size-150) 0;
 }
