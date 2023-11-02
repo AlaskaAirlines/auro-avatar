@@ -10,7 +10,7 @@ The default component presents itself as a circle and default image placement.
   <auro-avatar></auro-avatar>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -30,7 +30,7 @@ The auro-avatar component supports a `sm`, `md` and `lg` avatar types that deter
   <auro-avatar type="sm" code="mke"></auro-avatar>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -51,7 +51,7 @@ The auro-avatar supports placement of custom images using the `img` attribute.
   <auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -84,7 +84,7 @@ For the airline title, simply add content to the `display` slot. See the example
   </auro-avatar>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -112,7 +112,7 @@ The auro-avatar component is hidden from screen readers by default. The placemen
   <auro-avatar code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -129,7 +129,7 @@ The auro-avatar component will use a fallback image if a `code` value results in
   <auro-avatar code="INVALID"></auro-avatar>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
