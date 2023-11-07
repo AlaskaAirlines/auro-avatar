@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.3.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.3.0...v4.3.1) (2023-11-07)
+
+
+### Performance Improvements
+
+* **token:** update token per new theming [#44](https://github.com/AlaskaAirlines/auro-avatar/issues/44) ([13ccc4f](https://github.com/AlaskaAirlines/auro-avatar/commit/13ccc4f895d1c82469ac3ffd403fa21ee8326850))
+
 # [4.3.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.2.2...v4.3.0) (2023-07-10)
 
 
