@@ -55,7 +55,6 @@ Include the following example HTML code in the `<head>` element of your page.
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/essentials.css" />
 
 <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-avatar@latest/dist/auro-avatar__bundled.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-avatar@latest/dist/auro-avatar__bundled.es5.js" nomodule></script>
 ```
 
 **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
