@@ -14,12 +14,14 @@
     "type": "git",
     "url": "https://github.com/AlaskaAirlines/auro-avatar"
   },
+  "type": "module",
   "main": "index.js",
   "license": "Apache-2.0",
   "engines": {
     "node": "^18 || ^20"
   },
   "dependencies": {
+    "@aurodesignsystem/auro-library": "^2.2.4",
     "chalk": "^5.2.0",
     "lit": "^3.1.0"
   },
@@ -147,7 +149,7 @@
     "esLint": "./node_modules/.bin/eslint src/**/*.js",
     "linters": "npm-run-all scssLint esLint",
     "preCommit": "node scripts/pre-commit.mjs",
-    "postCss:component": "node ./scripts/postCss.js",
+    "postCss:component": "node ./scripts/postCss.mjs",
     "postinstall": "node packageScripts/postinstall.mjs",
     "sass:render": "sass-render src/*.css -t ./scripts/staticStyles-template.js",
     "serve": "web-dev-server --open demo/ --node-resolve --watch",
