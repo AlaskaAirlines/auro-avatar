@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.4.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.3.1...v4.4.0) (2024-01-18)
+
+
+### Features
+
+* add suport for SSR projects ([4fe07cb](https://github.com/AlaskaAirlines/auro-avatar/commit/4fe07cbffebfebb35ea28a8059d5b14fded2971d))
+
 ## [4.3.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.3.0...v4.3.1) (2023-11-07)
 
 
