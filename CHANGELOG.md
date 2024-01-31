@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [4.4.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.4.0...v4.4.1) (2024-01-31)
+
+
+### Performance Improvements
+
+* alaskaairux ref updates ([d0ee189](https://github.com/AlaskaAirlines/auro-avatar/commit/d0ee1891d0b0a1b96937a30d88a9757b7e66d6c2))
+* **docs:** update links from unpkg to jsdelivr ([1f07f7e](https://github.com/AlaskaAirlines/auro-avatar/commit/1f07f7ec98054c18a9acee98bb5cdd9e4b64802d))
+
 # [4.4.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.3.1...v4.4.0) (2024-01-18)
 
 
