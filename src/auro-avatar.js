@@ -7,11 +7,6 @@
 import { LitElement, html } from "lit";
 import '@aurodesignsystem/auro-icon';
 
-// If using auroElement base class
-// See instructions for importing auroElement base class https://git.io/JULq4
-// import { html, css } from "lit";
-// import AuroElement from '@alaskaairux/orion-web-core-style-sheets/dist/auroElement/auroElement';
-
 import styleCss from "./style-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
