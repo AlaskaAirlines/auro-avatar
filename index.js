@@ -5,9 +5,11 @@ import { AuroAvatar } from './src/auro-avatar.js';
  * @param {Object} name - Name to use for custom element.
  * @returns {void}
  */
-export function registerComponent(name) {
+ const registerComponent = (name = 'custom-avatar') => {
   // alias definition
   if (!customElements.get(name)) {
     customElements.define(name, class extends AuroAvatar {});
   }
 }
+
+export { registerComponent }
