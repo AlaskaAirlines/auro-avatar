@@ -1,11 +1,11 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import serve from 'rollup-plugin-serve';
 
-const production = !process.env.ROLLUP_WATCH;
+const production = !process.env.ROLLUP_WATCH,
 
-const modernConfig = {
+ modernConfig = {
   input: {
-    'auro-avatar__bundled': './index.js',
+    ['auro-avatar__bundled']: './index.js',
   },
   output: {
     format: 'esm',
