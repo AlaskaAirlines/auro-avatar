@@ -21,7 +21,7 @@ The following sections are editable by making changes to the following files:
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- The below content is automatically added from ./../docs/partials/description.md -->
-The `<auro-avatar>` web component is used to represent an image.
+The `<auro-avatar>` is an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of displaying iconic imagery for representation.
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/readmeAddlInfo.md) -->
 <!-- The below content is automatically added from ./../docs/partials/readmeAddlInfo.md -->
