@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.5.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.4.2...v4.5.0) (2024-02-22)
+
+
+### Features
+
+* **build:** modernize repo using generator build [#49](https://github.com/AlaskaAirlines/auro-avatar/issues/49) ([5efb92e](https://github.com/AlaskaAirlines/auro-avatar/commit/5efb92eeafb5c60ecbd2191123bd58152370989f))
+
 ## [4.4.2](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.4.1...v4.4.2) (2024-02-01)
 
 
