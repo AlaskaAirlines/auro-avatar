@@ -8,7 +8,7 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
 <!-- The below content is automatically added from ./description.md -->
-The `<auro-avatar>` web component is used to represent an image.
+The `<auro-avatar>` is an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of displaying iconic imagery for representation.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## Use cases
