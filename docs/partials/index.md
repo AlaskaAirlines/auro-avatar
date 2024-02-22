@@ -9,6 +9,12 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
+
+## Use cases
+
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
 ## Example(s)
 
 <div class="exampleWrapper">
