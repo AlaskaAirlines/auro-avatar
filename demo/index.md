@@ -11,6 +11,15 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 The `<auro-avatar>` web component is used to represent an image.
 <!-- AURO-GENERATED-CONTENT:END -->
 
+## Use cases
+
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
+<!-- The below content is automatically added from ./useCases.md -->
+The auro-avatar element should be used in situations where users may:
+* be provided with imagery to represent an airline's tail, cities, airports, or user profiles
+* need a visual representation
+<!-- AURO-GENERATED-CONTENT:END -->
+
 ## Example(s)
 
 <div class="exampleWrapper">

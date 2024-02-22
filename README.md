@@ -114,6 +114,9 @@ In cases where the project is not able to process JS assets, there are pre-proce
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- The below content is automatically added from ./../docs/partials/useCases.md -->
+The auro-avatar element should be used in situations where users may:
+* be provided with imagery to represent an airline's tail, cities, airports, or user profiles
+* need a visual representation
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Code Examples
