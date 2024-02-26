@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.5.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.5.0...v4.5.1) (2024-02-26)
+
+
+### Performance Improvements
+
+* **custom:** remove register component example ([514dd64](https://github.com/AlaskaAirlines/auro-avatar/commit/514dd64b1569bcc3cd8e818ffede0304223de296))
+
 # [4.5.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.4.2...v4.5.0) (2024-02-22)
 
 
