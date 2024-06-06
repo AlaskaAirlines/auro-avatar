@@ -6,23 +6,9 @@
 // Import Auro tokens
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties';
-
-// Support for fallback values
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
-
+ 
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
-
-// Support for auroElement styles
-// @import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
-
-// container styles - defines the look of the outer custom component
-// :host {
-//   ...
-// }
-
-// layout styles - define any layout specifications for UI that is contained WITHIN the component
-// never define layout that would cause effect on element outside the scope of this component
 
 img {
   display: block;
@@ -75,7 +61,7 @@ img {
     height: 100%;
     border-radius: 50%;
     margin: 0 auto;
-    background: linear-gradient(180deg, var(--ds-color-brand-midnight-200, $ds-color-brand-midnight-200) 0%, rgba(255 255 255 / .9) 100%);
+    background: linear-gradient(180deg, var(--ds-auro-avatar-tail-container-gradient-one-color) 0%, var(--ds-auro-avatar-tail-container-gradient-two-color) 100%);
   }
 
   auro-icon {

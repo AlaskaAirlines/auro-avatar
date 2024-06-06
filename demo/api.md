@@ -154,7 +154,7 @@ The auro-avatar component is hidden from screen readers by default. The placemen
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## Fallback Images
+### Fallback Images
 
 The auro-avatar component will use a fallback image if a `code` value results in an avatar image that fails to load.
 
@@ -174,3 +174,20 @@ The auro-avatar component will use a fallback image if a `code` value results in
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+
+### Theme Support
+
+The component may be restyled using the following code sample and changing the values of the following token(s).
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+
+```scss
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+:host {
+  --ds-auro-avatar-tail-container-gradient-one-color: var(--ds-color-brand-navy-500, #{$ds-color-brand-navy-500});
+  --ds-auro-avatar-tail-container-gradient-two-color: rgba(255 255 255 / .9);
+}
+```
+<!-- AURO-GENERATED-CONTENT:END -->
