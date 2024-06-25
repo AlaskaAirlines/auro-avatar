@@ -8,6 +8,7 @@ import { LitElement, html } from "lit";
 import '@aurodesignsystem/auro-icon';
 
 import styleCss from "./style-css.js";
+import tokensCss from "./tokens-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -61,7 +62,10 @@ export class AuroAvatar extends LitElement {
   }
 
   static get styles() {
-    return [styleCss];
+    return [
+      styleCss,
+      tokensCss
+    ];
   }
 
   /**
