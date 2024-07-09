@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [4.6.0-beta.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.5.1...v4.6.0-beta.1) (2024-07-09)
+
+
+### Features
+
+* refactor color tokens with tier 3 tokens [#53](https://github.com/AlaskaAirlines/auro-avatar/issues/53) ([d12f8f0](https://github.com/AlaskaAirlines/auro-avatar/commit/d12f8f09c42704ea5f7c3d55900f3eed9941bc89))
+
+
+### Performance Improvements
+
+* replace hard coded values with size tokens ([b11d729](https://github.com/AlaskaAirlines/auro-avatar/commit/b11d729d2790c05b8444efeb402517359d4bfee5))
+
 ## [4.5.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.5.0...v4.5.1) (2024-02-26)
 
 
