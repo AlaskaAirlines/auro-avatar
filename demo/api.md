@@ -186,8 +186,8 @@ The component may be restyled using the following code sample and changing the v
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 
 :host {
-  --ds-auro-avatar-tail-container-gradient-one-color: var(--ds-color-brand-navy-500, #{$ds-color-brand-navy-500});
-  --ds-auro-avatar-tail-container-gradient-two-color: rgba(255 255 255 / .9);
+  --ds-auro-avatar-tail-container-gradient-color-one: var(--ds-color-brand-navy-500, #{$ds-color-brand-navy-500});
+  --ds-auro-avatar-tail-container-gradient-color-two: rgba(255 255 255 / .9);
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
