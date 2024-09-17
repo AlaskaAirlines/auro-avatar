@@ -9,6 +9,8 @@
 import { LitElement } from "lit";
 import { html } from 'lit/static-html.js';
 
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
 import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
 
 import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
@@ -43,6 +45,11 @@ export class AuroAvatar extends LitElement {
      * @private
      */
     this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
   }
 
   // function to define props used within the scope of this component
@@ -80,6 +87,11 @@ export class AuroAvatar extends LitElement {
       styleCss,
       tokensCss
     ];
+  }
+
+  firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-avatar');
   }
 
   /**
