@@ -64,7 +64,7 @@ img {
     background: linear-gradient(180deg, var(--ds-auro-avatar-tail-container-gradient-color-one) 0%, var(--ds-auro-avatar-tail-container-gradient-color-two) 100%);
   }
 
-  auro-icon {
+  [auro-icon] {
     position: absolute;
     top: -1%;
     left: -25%;
