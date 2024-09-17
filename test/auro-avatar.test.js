@@ -77,7 +77,7 @@ describe('auro-avatar', () => {
     `);
 
     const root = el.shadowRoot;
-    const icon = root.querySelector('auro-icon').getAttribute('name');
+    const icon = root.querySelector('[auro-icon]').getAttribute('name');
 
     await expect(icon).to.equal("tail-JL");
   });
