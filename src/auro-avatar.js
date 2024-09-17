@@ -110,7 +110,7 @@ export class AuroAvatar extends LitElement {
       http.open('HEAD', url, false);
       http.send();
       return http.status;
-    } catch (err) {
+    } catch (err) { // eslint-disable-line
       // if the http.send() fails for any reason return `404` code
       const errorCode = 404;
       return errorCode;
