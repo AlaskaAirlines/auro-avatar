@@ -54,7 +54,7 @@ describe('auro-avatar', () => {
     const root = el.shadowRoot;
     const img = root.querySelector('img');
 
-    await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/Images/common-assets/destinations/180x180/partner");
+    await expect(img.src).to.equal("https://resource.alaskaair.net/-/media/Images/common-assets/destinations/180x180/mke");
   });
 
 
