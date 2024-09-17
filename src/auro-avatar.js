@@ -3,9 +3,16 @@
 
 // ---------------------------------------------------------------------
 
+/* eslint-disable lit/binding-positions, lit/no-invalid-html */
+
 // If use litElement base class
-import { LitElement, html } from "lit";
-import '@aurodesignsystem/auro-icon';
+import { LitElement } from "lit";
+import { html } from 'lit/static-html.js';
+
+import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
+
+import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
+import iconVersion from './iconVersion';
 
 import styleCss from "./style-css.js";
 import tokensCss from "./tokens-css.js";
@@ -29,6 +36,13 @@ export class AuroAvatar extends LitElement {
 
     this.alt = ``;
     this.ariaVisible = null;
+
+    const versioning = new AuroDependencyVersioning();
+
+    /**
+     * @private
+     */
+    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
   }
 
   // function to define props used within the scope of this component
@@ -155,7 +169,7 @@ export class AuroAvatar extends LitElement {
     if (this.tail) {
       return html`
         <div>
-          <auro-icon customSize category="logos" name="tail-${this.tail}"></auro-icon>
+          <${this.iconTag} customSize category="logos" name="tail-${this.tail}"></${this.iconTag}>
         </div>
         <slot name="display" class="tailTitle"></slot>
       `;
