@@ -1,6 +1,6 @@
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 
 :host {
-  --ds-auro-avatar-tail-container-gradient-color-one: var(--ds-color-brand-navy-500, #{$ds-color-brand-navy-500});
-  --ds-auro-avatar-tail-container-gradient-color-two: rgba(255 255 255 / .9);
+  --ds-auro-avatar-tail-container-gradient-color-one: var(--ds-color-utility-blue-default, #{$ds-color-utility-blue-default});
+  --ds-auro-avatar-tail-container-gradient-color-two: var(--ds-color-container-primary-default, #{$ds-color-container-primary-default});
 }
