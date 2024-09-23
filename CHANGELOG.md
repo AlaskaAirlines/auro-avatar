@@ -1,35 +1,5 @@
 # Semantic Release Automated Changelog
 
-# [4.6.0-beta.2](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.6.0-beta.1...v4.6.0-beta.2) (2024-09-17)
-
-
-### Bug Fixes
-
-* resolve minor color theming issues [#58](https://github.com/AlaskaAirlines/auro-avatar/issues/58) ([c210d2d](https://github.com/AlaskaAirlines/auro-avatar/commit/c210d2dae0be5dacd1d2ca51f4484cea3fdab6d4))
-
-
-### Features
-
-* **icon:** add auro-icon versioning tag name ([49c6dcd](https://github.com/AlaskaAirlines/auro-avatar/commit/49c6dcdf786c83d400a213a625c5b99c09454d48))
-
-
-### Performance Improvements
-
-* add attribute as tag name when custom registered ([b75b329](https://github.com/AlaskaAirlines/auro-avatar/commit/b75b329b679d0ce0e3537368a07f49dd2b0db490))
-* update dependencies and lint configurations ([a7abb76](https://github.com/AlaskaAirlines/auro-avatar/commit/a7abb7655feb74f5d2728adf81bab215fe21a261))
-
-# [4.6.0-beta.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.5.1...v4.6.0-beta.1) (2024-07-09)
-
-
-### Features
-
-* refactor color tokens with tier 3 tokens [#53](https://github.com/AlaskaAirlines/auro-avatar/issues/53) ([d12f8f0](https://github.com/AlaskaAirlines/auro-avatar/commit/d12f8f09c42704ea5f7c3d55900f3eed9941bc89))
-
-
-### Performance Improvements
-
-* replace hard coded values with size tokens ([b11d729](https://github.com/AlaskaAirlines/auro-avatar/commit/b11d729d2790c05b8444efeb402517359d4bfee5))
-
 ## [4.5.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.5.0...v4.5.1) (2024-02-26)
 
 
