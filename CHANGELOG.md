@@ -1,5 +1,32 @@
 # Semantic Release Automated Changelog
 
+# [5.0.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.5.1...v5.0.0) (2024-09-23)
+
+
+### Bug Fixes
+
+* resolve minor color theming issues [#58](https://github.com/AlaskaAirlines/auro-avatar/issues/58) ([ec6fcea](https://github.com/AlaskaAirlines/auro-avatar/commit/ec6fcea99257a85de305f48b2c06e7815eb08715))
+
+
+### Features
+
+* **icon:** add auro-icon versioning tag name ([a4e3dde](https://github.com/AlaskaAirlines/auro-avatar/commit/a4e3dde9384bb4019172d987535865e2b31a0212))
+* refactor color tokens with tier 3 tokens [#53](https://github.com/AlaskaAirlines/auro-avatar/issues/53) ([c89816f](https://github.com/AlaskaAirlines/auro-avatar/commit/c89816fea62f17995f9f7fa10711da20149866eb))
+
+
+### Performance Improvements
+
+* add attribute as tag name when custom registered ([acb8627](https://github.com/AlaskaAirlines/auro-avatar/commit/acb86272d96f321e2b864c67a19134d7f342f059))
+* add file extension for SSR support ([c2e406a](https://github.com/AlaskaAirlines/auro-avatar/commit/c2e406a22ed8b00059cabec7d85f0452b3b65d31))
+* replace hard coded values with size tokens ([3f05b52](https://github.com/AlaskaAirlines/auro-avatar/commit/3f05b524fb6df6254bdc8dc0789978b038432aea))
+* update dependencies ([4956ec7](https://github.com/AlaskaAirlines/auro-avatar/commit/4956ec7fb630fc457796e405177f2319468ce31c))
+* update dependencies and lint configurations ([ba60fbb](https://github.com/AlaskaAirlines/auro-avatar/commit/ba60fbb9cc015bb376ebda188b9159ade4a44818))
+
+
+### BREAKING CHANGES
+
+* trigger major release for theming support #53"
+
 ## [4.5.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v4.5.0...v4.5.1) (2024-02-26)
 
 
