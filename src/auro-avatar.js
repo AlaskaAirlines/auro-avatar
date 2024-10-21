@@ -89,6 +89,18 @@ export class AuroAvatar extends LitElement {
     ];
   }
 
+  /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-avatar"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroAvatar.register("custom-avatar") // this will register this element to <custom-avatar/>
+   *
+   */
+  static register(name = "auro-avatar") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroAvatar);
+  }
+
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
     this.runtimeUtils.handleComponentTagRename(this, 'auro-avatar');
@@ -197,9 +209,4 @@ export class AuroAvatar extends LitElement {
   render() {
     return this.template();
   }
-}
-
-// default internal definition
-if (!customElements.get("auro-avatar")) {
-  customElements.define("auro-avatar", AuroAvatar);
 }
