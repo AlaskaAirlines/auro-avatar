@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [5.1.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.0.1...v5.1.0) (2024-10-24)
+
+
+### Features
+
+* **api:** add register static method [#64](https://github.com/AlaskaAirlines/auro-avatar/issues/64) ([ae6c68c](https://github.com/AlaskaAirlines/auro-avatar/commit/ae6c68cb8df0b92f0fd99ace7c8add9ec77e932e))
+
+
+### Performance Improvements
+
+* move auro-icon from peer dependecy to dependency ([41770ff](https://github.com/AlaskaAirlines/auro-avatar/commit/41770ffcf4335238a55bd043eea2d660066b8016))
+* update dependency versions ([acf1851](https://github.com/AlaskaAirlines/auro-avatar/commit/acf1851fe6bfa50258fefa9e21f58318976eaa04))
+
 ## [5.0.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.0.0...v5.0.1) (2024-10-08)
 
 
