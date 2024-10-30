@@ -193,7 +193,7 @@ export class AuroAvatar extends LitElement {
     if (this.tail) {
       return html`
         <div>
-          <${this.iconTag} customSize category="logos" name="tail-${this.tail}"></${this.iconTag}>
+          <${this.iconTag} category="logos" name="tail-${this.tail}"></${this.iconTag}>
         </div>
         <slot name="display" class="tailTitle"></slot>
       `;
