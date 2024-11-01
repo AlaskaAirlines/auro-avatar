@@ -1,5 +1,23 @@
 # Semantic Release Automated Changelog
 
+# [5.2.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.1.0...v5.2.0) (2024-11-01)
+
+
+### Bug Fixes
+
+* update auro-icon package [#66](https://github.com/AlaskaAirlines/auro-avatar/issues/66) ([fbbc1a5](https://github.com/AlaskaAirlines/auro-avatar/commit/fbbc1a59d0b57d84d5f6edb49bbfb721616c6d0f))
+* update position and size to match docs render [#66](https://github.com/AlaskaAirlines/auro-avatar/issues/66) ([952df63](https://github.com/AlaskaAirlines/auro-avatar/commit/952df6376bbd36b85f057527145aa7600a6b5317))
+
+
+### Features
+
+* apply latest token ds-auro-icon-size [#66](https://github.com/AlaskaAirlines/auro-avatar/issues/66) ([e4829dc](https://github.com/AlaskaAirlines/auro-avatar/commit/e4829dc8947b191c8951b739e044f4575c3b63b2))
+
+
+### Performance Improvements
+
+* update dependencies ([2c6d40e](https://github.com/AlaskaAirlines/auro-avatar/commit/2c6d40ee13ddbe59b41f6ddebf64a7719a52240c))
+
 # [5.1.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.0.1...v5.1.0) (2024-10-24)
 
 
