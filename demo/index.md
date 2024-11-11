@@ -6,15 +6,15 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 # Avatar
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
-<!-- The below content is automatically added from ./description.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
+<!-- The below content is automatically added from ./../docs/partials/description.md -->
 The `<auro-avatar>` is an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of displaying iconic imagery for representation.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## Use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
-<!-- The below content is automatically added from ./useCases.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
+<!-- The below content is automatically added from ./../docs/partials/useCases.md -->
 The auro-avatar element should be used in situations where users may:
 * be provided with imagery to represent an airline's tail, cities, airports, or user profiles
 * need a visual representation
@@ -23,15 +23,15 @@ The auro-avatar element should be used in situations where users may:
 ## Example(s)
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/basic.html -->
   <auro-avatar></auro-avatar>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
 <auro-avatar></auro-avatar>
@@ -54,15 +54,15 @@ AuroAvatar.register('custom-avatar');
 This will create a new custom element that you can use in your HTML that will function identically to the `<auro-avatar>` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/custom.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/custom.html -->
   <custom-avatar></custom-avatar>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/custom.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/custom.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/custom.html -->
 
 ```html
 <custom-avatar></custom-avatar>

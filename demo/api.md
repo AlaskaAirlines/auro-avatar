@@ -1,5 +1,5 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
-<!-- The below content is automatically added from ./../api.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
+<!-- The below content is automatically added from ./../docs/api.md -->
 
 # auro-avatar
 
@@ -22,15 +22,15 @@ Custom element for the purpose of displaying an avatar image.
 ### Basic
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/basic.html -->
   <auro-avatar></auro-avatar>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
 <auro-avatar></auro-avatar>
@@ -43,8 +43,8 @@ Custom element for the purpose of displaying an avatar image.
 The auro-avatar component supports a `sm`, `md` and `lg` avatar types that determines the size of the image asset delivered. The assumed default is `lg`.</br>
 <small>Note: The previous `sm` and `md` boolean attributes are deprecated.</small>
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/size.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/size.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/size.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/size.html -->
   <auro-avatar code="boi"></auro-avatar>
   <auro-avatar type="md" code="anc"></auro-avatar>
   <auro-avatar type="sm" code="mke"></auro-avatar>
@@ -52,8 +52,8 @@ The auro-avatar component supports a `sm`, `md` and `lg` avatar types that deter
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/size.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/size.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/size.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/size.html -->
 
 ```html
 <auro-avatar code="boi"></auro-avatar>
@@ -68,8 +68,8 @@ The auro-avatar component supports a `sm`, `md` and `lg` avatar types that deter
 The auro-avatar supports placement of custom images using the `img` attribute.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customImage.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/customImage.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/customImage.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/customImage.html -->
   <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
   <auro-avatar img="https://picsum.photos/200?random=1" type="md"></auro-avatar>
   <auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
@@ -77,8 +77,8 @@ The auro-avatar supports placement of custom images using the `img` attribute.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customImage.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/customImage.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/customImage.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/customImage.html -->
 
 ```html
 <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
@@ -95,8 +95,8 @@ The tail options allow for a default and a `md` avatar type option. The `tail` p
 For the airline title, simply add content to the `display` slot. See the example code for the HTML API.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/tail.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/tail.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/tail.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/tail.html -->
   <auro-avatar tail="AS">
     <span slot="display">Alaska Airlines</span>
   </auro-avatar>
@@ -113,8 +113,8 @@ For the airline title, simply add content to the `display` slot. See the example
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/tail.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/tail.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/tail.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/tail.html -->
 
 ```html
 <auro-avatar tail="AS">
@@ -138,15 +138,15 @@ For the airline title, simply add content to the `display` slot. See the example
 The auro-avatar component is hidden from screen readers by default. The placement of altText using the `alt` attribute in conjunction with the `ariaVisible` attribute will make the avatar visible to screen readers.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/accessibility.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/accessibility.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/accessibility.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/accessibility.html -->
   <auro-avatar code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/accessibility.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/accessibility.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/accessibility.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/accessibility.html -->
 
 ```html
 <auro-avatar code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
@@ -159,15 +159,15 @@ The auro-avatar component is hidden from screen readers by default. The placemen
 The auro-avatar component will use a fallback image if a `code` value results in an avatar image that fails to load.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/fallback.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/fallback.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/fallback.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/fallback.html -->
   <auro-avatar code="INVALID"></auro-avatar>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/fallback.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/fallback.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/fallback.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/fallback.html -->
 
 ```html
 <auro-avatar code="INVALID"></auro-avatar>
@@ -179,8 +179,8 @@ The auro-avatar component will use a fallback image if a `code` value results in
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
-<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../src/tokens.scss -->
 
 ```scss
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
