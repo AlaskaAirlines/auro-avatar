@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [5.3.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.2.0...v5.3.0) (2024-11-15)
+
+
+### Features
+
+* upgrade auro-library to 3.0.1 ([49d928e](https://github.com/AlaskaAirlines/auro-avatar/commit/49d928e2240ce6f1fc2b69ec474160460c3d3b0a))
+
+
+### Performance Improvements
+
+* update library to 3.0.2 ([3d2ca4b](https://github.com/AlaskaAirlines/auro-avatar/commit/3d2ca4b23aeecd5f6186f5c5002ad1ef3e9e98ca))
+
 # [5.2.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.1.0...v5.2.0) (2024-11-01)
 
 
