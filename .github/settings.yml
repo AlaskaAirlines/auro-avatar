@@ -2,9 +2,6 @@ repository:
   # See https://docs.github.com/en/free-pro-team@latest/rest/reference/repos#edit for all available settings.
   # See https://github.com/apps/settings for app settings
 
-  # A short description of the repository that will show up on GitHub
-  description: Custom element for the purpose of displaying an avatar image.
-
   # A URL with more information about the repository
   homepage: https://auro.alaskaair.com/components/auro/avatar
 
@@ -22,6 +19,9 @@ repository:
 
   # Updates the default branch for this repository.
   default_branch: main
+
+  # Either `true` to enable automatic deletion of branches on merge, or `false` to disable
+  delete_branch_on_merge: true
 
   # Either `true` to allow squash-merging pull requests, or `false` to prevent
   # squash-merging.
@@ -135,7 +135,7 @@ labels:
     - wontfix
     - invalid
   - name: 'Type: Bug'
-    color: 'df0b37'
+    color: df0b37
     description: Bug or Bug fixes
     aliases:
     - bug
@@ -146,7 +146,7 @@ labels:
     - enhancement
   - name: 'Type: Design'
     color: 'ffd200'
-    description: New Design
+    description: New or related Design work
     aliases:
     - enhancement
   - name: 'Type: Content'
@@ -181,5 +181,10 @@ labels:
   - name: 'Type: Dependencies'
     color: 'ffd200'
     description: Pull requests that update a dependency file
+    aliases:
+    - dependencies
+  - name: 'Type: UI Update'
+    color: 'ffd200'
+    description: Changes to the user interface
     aliases:
     - dependencies
