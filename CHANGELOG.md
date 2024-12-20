@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [5.3.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.3.0...v5.3.1) (2024-12-20)
+
+
+### Performance Improvements
+
+* update node to version 22 ([363c769](https://github.com/AlaskaAirlines/auro-avatar/commit/363c769735ad3b5dc00e7c8e51c1dddcf89fa9a4))
+
 # [5.3.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.2.0...v5.3.0) (2024-11-15)
 
 
