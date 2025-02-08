@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+## [5.3.2](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.3.1...v5.3.2) (2025-02-08)
+
+
+### Bug Fixes
+
+* update node resolve for bundled assets ([10a05d4](https://github.com/AlaskaAirlines/auro-avatar/commit/10a05d4f38c995a0ff160de785540fce8bee2f82))
+
+
+### Performance Improvements
+
+* update dependencies ([b8ac196](https://github.com/AlaskaAirlines/auro-avatar/commit/b8ac196925ada85cd47a899ddbb8f39f192921c9))
+* update package-lock ([ee88b96](https://github.com/AlaskaAirlines/auro-avatar/commit/ee88b9601ad0c12a7259993224f7c9882a510796))
+
 ## [5.3.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.3.0...v5.3.1) (2024-12-20)
 
 
