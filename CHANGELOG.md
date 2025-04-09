@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [6.0.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v6.0.0...v6.0.1) (2025-04-09)
+
+
+### Performance Improvements
+
+* add wca script for docs api ([38f62db](https://github.com/AlaskaAirlines/auro-avatar/commit/38f62dbdbb49d1c2a3ab2323c418e3664dcb928b))
+
 # [6.0.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v5.3.2...v6.0.0) (2025-02-28)
 
 
