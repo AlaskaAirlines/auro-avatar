@@ -183,11 +183,12 @@ The component may be restyled using the following code sample and changing the v
 <!-- The below code snippet is automatically added from ./../src/tokens.scss -->
 
 ```scss
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska';
 
 :host {
-  --ds-auro-avatar-tail-container-gradient-color-one: var(--ds-color-utility-blue-default, #{$ds-color-utility-blue-default});
-  --ds-auro-avatar-tail-container-gradient-color-two: var(--ds-color-container-primary-default, #{$ds-color-container-primary-default});
+  --ds-auro-avatar-tail-container-gradient-color-one: var(--ds-advanced-color-avatar-gradient-top, #{$ds-advanced-color-avatar-gradient-top});
+  --ds-auro-avatar-tail-container-gradient-color-two: var(--ds-advanced-color-avatar-gradient-bottom, #{$ds-advanced-color-avatar-gradient-bottom});
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
