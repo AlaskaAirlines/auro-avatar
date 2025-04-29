@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [6.1.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v6.0.1...v6.1.0) (2025-04-29)
+
+
+### Features
+
+* update to use new color theme tokens [#78](https://github.com/AlaskaAirlines/auro-avatar/issues/78) ([119f32e](https://github.com/AlaskaAirlines/auro-avatar/commit/119f32e520c3b3f6a8c7d731a086a0af72abee6d))
+
 ## [6.0.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v6.0.0...v6.0.1) (2025-04-09)
 
 
