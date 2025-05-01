@@ -20,9 +20,9 @@ img {
 }
 
 :host {
-  --sm: calc(var(--ds-size-600, $ds-size-600) + var(--ds-size-150, $ds-size-150));
-  --md: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-200, $ds-size-200));
-  --lg: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-600, $ds-size-600) + var(--ds-size-75, $ds-size-75));
+  --sm: calc(var(--ds-size-600, #{$ds-size-600}) + var(--ds-size-150, #{$ds-size-150}));
+  --md: calc(var(--ds-size-1000, #{$ds-size-1000}) + var(--ds-size-200, #{$ds-size-200}));
+  --lg: calc(var(--ds-size-1000, #{$ds-size-1000}) + var(--ds-size-600, #{$ds-size-600}) + var(--ds-size-75, #{$ds-size-75}));
 
   display: inline-block;
   width: var(--lg);
