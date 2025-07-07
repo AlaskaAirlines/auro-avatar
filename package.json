@@ -23,8 +23,8 @@
     "@alaskaairux/icons": "^5.3.0",
     "@aurodesignsystem/auro-icon": "^8.0.1",
     "@aurodesignsystem/auro-library": "^4.3.0",
-    "@aurodesignsystem/design-tokens": "^5.10.0",
-    "@aurodesignsystem/webcorestylesheets": "6.1.0",
+    "@aurodesignsystem/design-tokens": "^8.2.1",
+    "@aurodesignsystem/webcorestylesheets": "10.0.0",
     "chalk": "^5.3.0",
     "lit": "^3.3.0"
   },
@@ -145,7 +145,7 @@
     "build:dev:assets": "npm-run-all build:sass:component postCss:component sass:render build:docs",
     "build:docs": "node ./node_modules/@aurodesignsystem/auro-library/scripts/build/generateDocs.mjs",
     "build:sass": "npm-run-all build:sass:component postCss:component sass:render",
-    "build:sass:component": "sass --no-source-map src:src",
+    "build:sass:component": "sass --load-path=node_modules --no-source-map src:src",
     "build:version": "node scripts/version.mjs",
     "build:watch": "nodemon -e scss,js,html --watch src --watch apiExamples/**/* --exec npm run build:dev:assets",
     "bundler": "rollup -c",
@@ -165,6 +165,6 @@
     "test:watch": "wtr --watch",
     "types": "tsc",
     "postversion": "npm-run-all build:api build:docs",
-    "prepare": "husky install"
+    "prepare": "husky"
   }
 }

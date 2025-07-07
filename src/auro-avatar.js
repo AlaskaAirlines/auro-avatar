@@ -195,7 +195,7 @@ export class AuroAvatar extends LitElement {
         <div>
           <${this.iconTag} category="logos" name="tail-${this.tail}"></${this.iconTag}>
         </div>
-        <slot name="display" class="tailTitle"></slot>
+        <slot name="display" class="tailTitle body-default"></slot>
       `;
     }
 
