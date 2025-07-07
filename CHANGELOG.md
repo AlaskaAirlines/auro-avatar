@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [6.1.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v6.1.0...v6.1.1) (2025-07-07)
+
+
+### Bug Fixes
+
+* add themeable type classes ([c0f7620](https://github.com/AlaskaAirlines/auro-avatar/commit/c0f76204270f38a315d342ecb8a373522ff4158c))
+* update docs head content ([c65b290](https://github.com/AlaskaAirlines/auro-avatar/commit/c65b2903a7ba3a5226006e3752f5f943d1458da7))
+* update SCSS token formatting ([ad1f484](https://github.com/AlaskaAirlines/auro-avatar/commit/ad1f484a69b95fb3d2e3170e7946235dc0211e85))
+
 # [6.1.0](https://github.com/AlaskaAirlines/auro-avatar/compare/v6.0.1...v6.1.0) (2025-04-29)
 
 
