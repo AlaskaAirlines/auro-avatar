@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [6.1.2](https://github.com/AlaskaAirlines/auro-avatar/compare/v6.1.1...v6.1.2) (2025-08-14)
+
+
+### Bug Fixes
+
+* update auro-library to latest version ([f9b078a](https://github.com/AlaskaAirlines/auro-avatar/commit/f9b078a5c69e9f6d30ea2a3224c1bc020ae9c1d9))
+
 ## [6.1.1](https://github.com/AlaskaAirlines/auro-avatar/compare/v6.1.0...v6.1.1) (2025-07-07)
 
 
