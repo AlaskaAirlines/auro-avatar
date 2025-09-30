@@ -1,5 +1,4 @@
-
-import { AuroAvatar } from '../../src/auro-avatar.js';
+import { AuroAvatar } from "../../src/auro-avatar.js";
 
 /**
  * Custom element for the purpose of displaying an avatar image.
