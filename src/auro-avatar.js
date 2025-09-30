@@ -3,8 +3,6 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable lit/binding-positions, lit/no-invalid-html */
-
 import { AuroIcon } from "@aurodesignsystem/auro-icon/src/auro-icon.js";
 import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
 
@@ -14,8 +12,8 @@ import { LitElement } from "lit";
 import { html } from "lit/static-html.js";
 import iconVersion from "./iconVersion.js";
 
-import styleCss from "./style-css.js";
-import tokensCss from "./tokens-css.js";
+import styleCss from "./styles/style.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**

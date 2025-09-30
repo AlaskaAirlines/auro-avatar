@@ -37,7 +37,7 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `AuroAvatar.register(name)` method and pass in a unique name.
 
 ```js
-import { AuroAvatar } from '../src/auro-avatar.js';
+import { AuroAvatar } from '@aurodesignsystem/auro-avatar/class';
 
 AuroAvatar.register('custom-avatar');
 ```
