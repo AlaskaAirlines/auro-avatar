@@ -5,16 +5,14 @@
 
 /* eslint-disable lit/binding-positions, lit/no-invalid-html */
 
+import { AuroIcon } from "@aurodesignsystem/auro-icon/src/auro-icon.js";
+import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
+
+import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
 // If use litElement base class
 import { LitElement } from "lit";
-import { html } from 'lit/static-html.js';
-
-import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
-
-import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
-import iconVersion from './iconVersion.js';
+import { html } from "lit/static-html.js";
+import iconVersion from "./iconVersion.js";
 
 import styleCss from "./style-css.js";
 import tokensCss from "./tokens-css.js";
@@ -36,7 +34,7 @@ export class AuroAvatar extends LitElement {
   constructor() {
     super();
 
-    this.alt = ``;
+    this.alt = "";
     this.ariaVisible = null;
 
     const versioning = new AuroDependencyVersioning();
@@ -44,7 +42,7 @@ export class AuroAvatar extends LitElement {
     /**
      * @private
      */
-    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
+    this.iconTag = versioning.generateTag("auro-icon", iconVersion, AuroIcon);
 
     /**
      * @private
@@ -57,36 +55,33 @@ export class AuroAvatar extends LitElement {
     return {
       // ...super.properties,
       ariaVisible: {
-        type: Boolean
+        type: Boolean,
       },
       code: {
         type: String,
-        reflect: true
+        reflect: true,
       },
       img: {
         type: String,
-        reflect: true
+        reflect: true,
       },
       alt: {
         type: String,
-        reflect: true
+        reflect: true,
       },
       tail: {
         type: String,
-        reflect: true
+        reflect: true,
       },
       type: {
         type: String,
-        reflect: true
-      }
+        reflect: true,
+      },
     };
   }
 
   static get styles() {
-    return [
-      styleCss,
-      tokensCss
-    ];
+    return [styleCss, tokensCss];
   }
 
   /**
@@ -103,7 +98,7 @@ export class AuroAvatar extends LitElement {
 
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
-    this.runtimeUtils.handleComponentTagRename(this, 'auro-avatar');
+    this.runtimeUtils.handleComponentTagRename(this, "auro-avatar");
   }
 
   /**
@@ -111,7 +106,7 @@ export class AuroAvatar extends LitElement {
    * @returns {string} - Returns true or false.
    */
   aria() {
-    return this.ariaVisible ? 'false' : 'true';
+    return this.ariaVisible ? "false" : "true";
   }
 
   /**
@@ -120,17 +115,17 @@ export class AuroAvatar extends LitElement {
    * @returns {string} - Returns true or false.
    */
   imageSize(type) {
-    let output = '';
+    let output = "";
 
     switch (type) {
-      case `sm`:
-        output = '180x180';
+      case "sm":
+        output = "180x180";
         break;
-      case 'md':
-        output = '360x360';
+      case "md":
+        output = "360x360";
         break;
       default:
-        output = '800x800';
+        output = "800x800";
         break;
     }
 
@@ -145,10 +140,11 @@ export class AuroAvatar extends LitElement {
   urlStatus(url) {
     try {
       const http = new XMLHttpRequest();
-      http.open('HEAD', url, false);
+      http.open("HEAD", url, false);
       http.send();
       return http.status;
-    } catch (err) { // eslint-disable-line
+    } catch (_err) {
+      // eslint-disable-line
       // if the http.send() fails for any reason return `404` code
       const errorCode = 404;
       return errorCode;
@@ -168,10 +164,7 @@ export class AuroAvatar extends LitElement {
       url = `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/${this.code}`;
 
       /* eslint-disable no-magic-numbers */
-      const errorCodes = [
-        403,
-        404
-      ];
+      const errorCodes = [403, 404];
       /* eslint-enable no-magic-numbers */
 
       if (errorCodes.includes(this.urlStatus(url))) {
