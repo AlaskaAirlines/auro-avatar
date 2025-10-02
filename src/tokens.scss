@@ -1,7 +1,0 @@
-@use '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables' as vac;
-@use '@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska' as v;
-
-:host {
-  --ds-auro-avatar-tail-container-gradient-color-one: var(--ds-advanced-color-avatar-gradient-top, #{v.$ds-advanced-color-avatar-gradient-top});
-  --ds-auro-avatar-tail-container-gradient-color-two: var(--ds-advanced-color-avatar-gradient-bottom, #{v.$ds-advanced-color-avatar-gradient-bottom});
-}
