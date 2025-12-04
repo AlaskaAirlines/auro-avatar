@@ -72,6 +72,8 @@ describe("auro-avatar", () => {
     );
   });
 
+  // DEPRECATED: Testing deprecated tail attribute functionality
+  // The tail attribute is deprecated in favor of the auro-tail component
   it("sets tail image", async () => {
     const el = await fixture(html`
       <auro-avatar type="md" tail="JL">
