@@ -24,6 +24,7 @@ import tokensCss from "./styles/tokens.scss";
  * @attr {String} code - provide airport code for requested airport image
  * @attr {String} img - provide location or URL for image to be used
  * @attr {String} tail - provide tail logo for requested airline
+ * @deprecated The tail attribute is deprecated. Use the auro-tail component instead. See: https://github.com/AlaskaAirlines/auro-tail
  * @attr {String} type - modifiers for size of avatar (sm | md)
  */
 
@@ -67,6 +68,9 @@ export class AuroAvatar extends LitElement {
         type: String,
         reflect: true,
       },
+      /**
+       * @deprecated Use the auro-tail component instead. See: https://github.com/AlaskaAirlines/auro-tail
+       */
       tail: {
         type: String,
         reflect: true,

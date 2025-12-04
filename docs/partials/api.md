@@ -50,25 +50,6 @@ The auro-avatar supports placement of custom images using the `img` attribute.
 
 </auro-accordion>
 
-### Tail icon options
-
-The tail options allow for a default and a `md` avatar type option. The `tail` property accepts the two letter code per the airline. See the [Github repo](https://github.com/AlaskaAirlines/Icons/tree/master/src/icons/logos) for a list of currently available logos.</br>
-<small>Note: The previous `md` boolean attributes are deprecated.</small>
-
-For the airline title, simply add content to the `display` slot. See the example code for the HTML API.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/tail.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/tail.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
 ### Accessibility options
 
 The auro-avatar component is hidden from screen readers by default. The placement of altText using the `alt` attribute in conjunction with the `ariaVisible` attribute will make the avatar visible to screen readers.
