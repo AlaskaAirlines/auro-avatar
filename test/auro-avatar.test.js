@@ -67,6 +67,9 @@ describe("auro-avatar", () => {
     const root = el.shadowRoot;
     const img = root.querySelector("img");
 
+    // Wait for the component to finish checking the URL and potentially updating
+    await new Promise(resolve => setTimeout(resolve, 100));
+
     await expect(img.src).to.equal(
       "https://resource.alaskaair.net/-/media/Images/common-assets/destinations/800x800/partner",
     );
