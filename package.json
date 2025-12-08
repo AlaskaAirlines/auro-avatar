@@ -64,14 +64,19 @@
   },
   "exports": {
     "./package.json": "./package.json",
+    "./custom-elements.json": "./custom-elements.json",
     "./readme.md": "./README.md",
-    ".": "./dist/registered.js",
     "./demo/*.md": "./demo/*.md",
     "./demo/*.js": "./demo/*.min.js",
     "./class": {
       "module": "./dist/index.js",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    ".": {
+      "module": "./dist/registered.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/registered.js"
     }
   },
   "files": [
@@ -82,5 +87,8 @@
     "LICENSE",
     "NOTICE"
   ],
-  "customElements": "custom-elements.json"
+  "customElements": "custom-elements.json",
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "*"
+  }
 }
