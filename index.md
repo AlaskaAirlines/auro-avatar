@@ -15,8 +15,8 @@ The `<auro-avatar>` is an [HTML custom element](https://developer.mozilla.org/en
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- The below content is automatically added from ./../docs/partials/useCases.md -->
-The auro-avatar element should be used in situations where users may:
-* be provided with imagery to represent an airline's tail, cities, airports, or user profiles
+The `<auro-avatar>` element should be used in situations where users may:
+* be provided with imagery to represent cities, airports, or user profiles
 * need a visual representation
 <!-- AURO-GENERATED-CONTENT:END -->
 
@@ -41,7 +41,7 @@ The auro-avatar element should be used in situations where users may:
 
 ### Recommended Use and Version Control
 
-There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom element. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `auro-avatar` custom element is defined automatically.
+There are two important parts of every Auro component: the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom element. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `<auro-avatar>` custom element is defined automatically.
 
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `AuroAvatar.register(name)` method and pass in a unique name.
 

@@ -5,16 +5,22 @@
 
 Custom element for the purpose of displaying an avatar image.
 
-## Properties
+### Properties & Attributes
 
-| Property      | Attribute     | Type      | Default | Description                                      |
-|---------------|---------------|-----------|---------|--------------------------------------------------|
-| [alt](#alt)         | `alt`         | `String`  | ""      | provide string for element alt text              |
-| [ariaVisible](#ariaVisible) | `ariaVisible` | `Boolean` | null    | true value reveals content to screen reader      |
-| [code](#code)        | `code`        | `String`  |         | provide airport code for requested airport image |
-| [img](#img)         | `img`         | `String`  |         | provide location or URL for image to be used     |
-| [tail](#tail)        | `tail`        | `String`  |         | provide tail logo for requested airline          |
-| [type](#type)        | `type`        | `String`  |         | modifiers for size of avatar (sm \| md)          |
+| Properties  | Attributes  | Modifiers | Type         | Default | Description                                                                                                                                         |
+| ----------- | ----------- | --------- | ------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| alt         | alt         |           | string       | `""`    | Provide string for element alt text.                                                                                                                |
+| ariaVisible | ariaVisible |           | null         | `null`  | True value reveals content to screen reader.                                                                                                        |
+| code        | code        |           | string       |         | Provide airport code for requested airport image.                                                                                                   |
+| img         | img         |           | string       |         | Provide location or URL for image to be used.                                                                                                       |
+| tail        | tail        |           | string       |         | **DEPRECATED**: Provides a tail logo for the requested airline. Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead. |
+| type        | type        |           | `sm` \| `md` |         | Modifiers for size of avatar.                                                                                                                       |
+
+### Methods
+
+| Name     | Parameters                                                          | Return | Description                                       |
+| -------- | ------------------------------------------------------------------- | ------ | ------------------------------------------------- |
+| register | `name` (string) - The name of element that you want to register to. |        | This will register this element with the browser. |
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -84,51 +90,6 @@ The auro-avatar supports placement of custom images using the `img` attribute.
 <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
 <auro-avatar img="https://picsum.photos/200?random=1" type="md"></auro-avatar>
 <auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Tail icon options
-
-The tail options allow for a default and a `md` avatar type option. The `tail` property accepts the two letter code per the airline. See the [Github repo](https://github.com/AlaskaAirlines/Icons/tree/master/src/icons/logos) for a list of currently available logos.</br>
-<small>Note: The previous `md` boolean attributes are deprecated.</small>
-For the airline title, simply add content to the `display` slot. See the example code for the HTML API.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/tail.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/tail.html -->
-  <auro-avatar tail="AS">
-    <span slot="display">Alaska Airlines</span>
-  </auro-avatar>
-  <auro-avatar tail="AA">
-    <span slot="display">American Airlines</span>
-  </auro-avatar>
-  <auro-avatar type="md" tail="QF">
-    <span slot="display">Quantas</span>
-  </auro-avatar>
-  <auro-avatar type="md" tail="JL">
-    <span slot="display">Japan Airlines</span>
-  </auro-avatar>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/tail.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/tail.html -->
-
-```html
-<auro-avatar tail="AS">
-  <span slot="display">Alaska Airlines</span>
-</auro-avatar>
-<auro-avatar tail="AA">
-  <span slot="display">American Airlines</span>
-</auro-avatar>
-<auro-avatar type="md" tail="QF">
-  <span slot="display">Quantas</span>
-</auro-avatar>
-<auro-avatar type="md" tail="JL">
-  <span slot="display">Japan Airlines</span>
-</auro-avatar>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
