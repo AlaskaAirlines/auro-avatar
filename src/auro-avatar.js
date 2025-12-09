@@ -17,14 +17,8 @@ import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
+ * @customElement auro-avatar
  * Custom element for the purpose of displaying an avatar image.
- *
- * @attr {Boolean} ariaVisible - true value reveals content to screen reader
- * @attr {String} alt - provide string for element alt text
- * @attr {String} code - provide airport code for requested airport image
- * @attr {String} img - provide location or URL for image to be used
- * @attr {String} tail - provide tail logo for requested airline
- * @attr {String} type - modifiers for size of avatar (sm | md)
  */
 
 // build the component class
@@ -52,25 +46,52 @@ export class AuroAvatar extends LitElement {
   static get properties() {
     return {
       // ...super.properties,
-      ariaVisible: {
-        type: Boolean,
-      },
-      code: {
-        type: String,
-        reflect: true,
-      },
-      img: {
-        type: String,
-        reflect: true,
-      },
+
+      /**
+       * Provide string for element alt text.
+       * @default ""
+       */
       alt: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * True value reveals content to screen reader.
+       * @default null
+       */
+      ariaVisible: {
+        type: Boolean,
+      },
+
+      /**
+       * Provide airport code for requested airport image.
+       */
+      code: {
+        type: String,
+        reflect: true,
+      },
+
+      /**
+       * Provide location or URL for image to be used.
+       */
+      img: {
+        type: String,
+        reflect: true,
+      },
+
+      /**
+       * **DEPRECATED**: Provides a tail logo for the requested airline. Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead.
+       */
       tail: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * Modifiers for size of avatar.
+       * @type {'sm' | 'md'}
+       */
       type: {
         type: String,
         reflect: true,

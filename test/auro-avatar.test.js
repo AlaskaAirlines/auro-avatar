@@ -67,11 +67,16 @@ describe("auro-avatar", () => {
     const root = el.shadowRoot;
     const img = root.querySelector("img");
 
+    // Wait for the component to finish rendering
+    await el.updateComplete;
+
     await expect(img.src).to.equal(
       "https://resource.alaskaair.net/-/media/Images/common-assets/destinations/800x800/partner",
     );
   });
 
+  // DEPRECATED: Testing deprecated tail attribute functionality
+  // The tail attribute is deprecated in favor of the auro-tail component
   it("sets tail image", async () => {
     const el = await fixture(html`
       <auro-avatar type="md" tail="JL">
