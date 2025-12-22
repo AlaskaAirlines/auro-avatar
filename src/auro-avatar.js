@@ -1,9 +1,9 @@
-// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2025 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
 
-import { AuroIcon } from "@aurodesignsystem/auro-icon/src/auro-icon.js";
+import { AuroIcon } from "@aurodesignsystem/auro-icon/class";
 import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
 
 import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
@@ -17,15 +17,17 @@ import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
+ * The `auro-avatar` element provides a container to display an avatar image.
  * @customElement auro-avatar
- * Custom element for the purpose of displaying an avatar image.
  */
-
-// build the component class
 export class AuroAvatar extends LitElement {
   constructor() {
     super();
 
+    this._initializeDefaults();
+  }
+
+  _initializeDefaults() {
     this.alt = "";
     this.ariaVisible = null;
 
@@ -49,7 +51,6 @@ export class AuroAvatar extends LitElement {
 
       /**
        * Provide string for element alt text.
-       * @default ""
        */
       alt: {
         type: String,
@@ -57,11 +58,10 @@ export class AuroAvatar extends LitElement {
       },
 
       /**
-       * True value reveals content to screen reader.
-       * @default null
+       * If true, reveals content to screen reader.
        */
       ariaVisible: {
-        type: Boolean,
+        type: Boolean
       },
 
       /**
@@ -105,7 +105,7 @@ export class AuroAvatar extends LitElement {
 
   /**
    * This will register this element with the browser.
-   * @param {string} [name="auro-avatar"] - The name of element that you want to register to.
+   * @param {string} [name="auro-avatar"] - The name of the element that you want to register.
    *
    * @example
    * AuroAvatar.register("custom-avatar") // this will register this element to <custom-avatar/>

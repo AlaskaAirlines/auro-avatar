@@ -4,7 +4,7 @@ import "../src/registered";
 describe("auro-avatar", () => {
   it("auro-avatar is accessible", async () => {
     const el = await fixture(html`
-    <auro-avatar type="lg" code="psp"></auro-avatar>
+    <auro-avatar code="psp"></auro-avatar>
     `);
 
     await expect(el).to.be.accessible();
