@@ -3,14 +3,14 @@
 
 # auro-avatar
 
-Custom element for the purpose of displaying an avatar image.
+The `auro-avatar` element provides a container to display an avatar image.
 
 ### Properties & Attributes
 
 | Properties  | Attributes  | Modifiers | Type         | Default | Description                                                                                                                                         |
 | ----------- | ----------- | --------- | ------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| alt         | alt         |           | string       | `""`    | Provide string for element alt text.                                                                                                                |
-| ariaVisible | ariaVisible |           | null         | `null`  | True value reveals content to screen reader.                                                                                                        |
+| alt         | alt         |           | string       |         | Provide string for element alt text.                                                                                                                |
+| ariaVisible | ariaVisible |           | boolean      |         | If true, reveals content to screen reader.                                                                                                          |
 | code        | code        |           | string       |         | Provide airport code for requested airport image.                                                                                                   |
 | img         | img         |           | string       |         | Provide location or URL for image to be used.                                                                                                       |
 | tail        | tail        |           | string       |         | **DEPRECATED**: Provides a tail logo for the requested airline. Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead. |
@@ -18,14 +18,12 @@ Custom element for the purpose of displaying an avatar image.
 
 ### Methods
 
-| Name     | Parameters                                                          | Return | Description                                       |
-| -------- | ------------------------------------------------------------------- | ------ | ------------------------------------------------- |
-| register | `name` (string) - The name of element that you want to register to. |        | This will register this element with the browser. |
+| Name     | Parameters                                                           | Return | Description                                       |
+| -------- | -------------------------------------------------------------------- | ------ | ------------------------------------------------- |
+| register | `name` (string) - The name of the element that you want to register. |        | This will register this element with the browser. |
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## API Examples
-
-### Basic
+## Basic
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
@@ -44,10 +42,79 @@ Custom element for the purpose of displaying an avatar image.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Component size options
+## Property & Attribute Examples
 
-The auro-avatar component supports a `sm`, `md` and `lg` avatar types that determines the size of the image asset delivered. The assumed default is `lg`.</br>
-<small>Note: The previous `sm` and `md` boolean attributes are deprecated.</small>
+### Accessibility Options
+
+The `auro-avatar` element is hidden from screen readers by default. The placement of altText using the `alt` attribute in conjunction with the `ariaVisible` attribute will make the avatar visible to screen readers.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/accessibility.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/accessibility.html -->
+  <auro-avatar ariaVisible alt="beautiful image of the sky"></auro-avatar>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/accessibility.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/accessibility.html -->
+
+```html
+<auro-avatar ariaVisible alt="beautiful image of the sky"></auro-avatar>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Airport Code
+
+Use the `code` attribute to specify the airport code for the desired avatar image. The component will render the corresponding avatar image based on the provided airport code.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/code.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/code.html -->
+  <auro-avatar code="sea"></auro-avatar>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/code.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/code.html -->
+
+```html
+<auro-avatar code="sea"></auro-avatar>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Custom Images
+
+The `auro-avatar` element supports placement of custom images using the `img` attribute.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom-image.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/custom-image.html -->
+  <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
+  <auro-avatar img="https://picsum.photos/200?random=1" type="md"></auro-avatar>
+  <auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/custom-image.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/custom-image.html -->
+
+```html
+<auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
+<auro-avatar img="https://picsum.photos/200?random=1" type="md"></auro-avatar>
+<auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Size Options
+
+The `auro-avatar` element supports a `sm`, `md` avatar types that determines the size of the image asset delivered, using the `type` attribute. The assumed default is `lg`.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/size.html) -->
   <!-- The below content is automatically added from ./../apiExamples/size.html -->
@@ -69,55 +136,11 @@ The auro-avatar component supports a `sm`, `md` and `lg` avatar types that deter
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Custom images
-
-The auro-avatar supports placement of custom images using the `img` attribute.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/customImage.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/customImage.html -->
-  <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
-  <auro-avatar img="https://picsum.photos/200?random=1" type="md"></auro-avatar>
-  <auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/customImage.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/customImage.html -->
-
-```html
-<auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
-<auro-avatar img="https://picsum.photos/200?random=1" type="md"></auro-avatar>
-<auro-avatar img="https://picsum.photos/200?random=2" type="sm"></auro-avatar>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Accessibility options
-
-The auro-avatar component is hidden from screen readers by default. The placement of altText using the `alt` attribute in conjunction with the `ariaVisible` attribute will make the avatar visible to screen readers.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/accessibility.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/accessibility.html -->
-  <auro-avatar code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/accessibility.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/accessibility.html -->
-
-```html
-<auro-avatar code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
+## Common Usage Patterns & Functional Examples
 
 ### Fallback Images
 
-The auro-avatar component will use a fallback image if a `code` value results in an avatar image that fails to load.
+A fallback image will be used in the `auro-avatar` element if a `code` attribute value results in an avatar image that fails to load.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/fallback.html) -->
@@ -136,9 +159,9 @@ The auro-avatar component will use a fallback image if a `code` value results in
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Theme Support
+## Restyle Component with CSS Variables
 
-The component may be restyled using the following code sample and changing the values of the following token(s).
+The component may be restyled by changing the values of the following token(s).
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/styles/tokens.scss) -->
 <!-- The below code snippet is automatically added from ./../src/styles/tokens.scss -->
