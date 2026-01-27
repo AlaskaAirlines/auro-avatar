@@ -99,7 +99,14 @@ You can do this by importing only the component class and using the `register(na
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./docs/partials/customRegistration.md) -->
 <!-- The below content is automatically added from ./docs/partials/customRegistration.md -->
-<!-- add custom registration content here -->
+
+```js
+import { AuroAvatar } from '@aurodesignsystem/auro-avatar/class';
+
+AuroAvatar.register('custom-avatar');
+```
+
+This will create a new custom element that you can use in your HTML that will function identically to the `<auro-avatar>` element.
 <!-- AURO-GENERATED-CONTENT:END -->
 <div class="exampleWrapper exampleWrapper--flex">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./apiExamples/custom.html) -->
