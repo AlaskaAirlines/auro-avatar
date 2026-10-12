@@ -19,6 +19,8 @@ import tokensCss from "./styles/tokens.scss";
 /**
  * The `auro-avatar` element provides a container to display an avatar image.
  * @customElement auro-avatar
+ *
+ * @slot display - Text displayed below the tail logo. Only rendered when the deprecated `tail` attribute is set.
  */
 export class AuroAvatar extends LitElement {
   constructor() {
@@ -61,7 +63,8 @@ export class AuroAvatar extends LitElement {
        * If true, reveals content to screen reader.
        */
       ariaVisible: {
-        type: Boolean
+        type: Boolean,
+        attribute: "ariavisible",
       },
 
       /**
@@ -82,6 +85,7 @@ export class AuroAvatar extends LitElement {
 
       /**
        * **DEPRECATED**: Provides a tail logo for the requested airline. Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead.
+       * @deprecated Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead.
        */
       tail: {
         type: String,
