@@ -1,7 +1,29 @@
 import { expect, fixture, html } from "@open-wc/testing";
+import { AuroAvatar } from "../src/auro-avatar.js";
 import "../src/registered";
 
 describe("auro-avatar", () => {
+  // `code` triggers a synchronous HEAD request to resource.alaskaair.net, which can
+  // exceed the test timeout. Stub the status check so tests don't depend on the network.
+  const originalUrlStatus = AuroAvatar.prototype.urlStatus;
+
+  // The HTTP status the stubbed `urlStatus()` method returns. This is a plain variable,
+  // not the method itself; assign it in a test to simulate a different server response.
+  let urlStatus;
+
+  beforeEach(() => {
+    // Default to 200 so every airport image "exists" unless a test says otherwise.
+    urlStatus = 200;
+
+    // Replace the real network check with one that returns the `urlStatus` variable.
+    AuroAvatar.prototype.urlStatus = () => urlStatus;
+  });
+
+  afterEach(() => {
+    // Restore the real method so the stub doesn't leak outside this suite.
+    AuroAvatar.prototype.urlStatus = originalUrlStatus;
+  });
+
   it("auro-avatar is accessible", async () => {
     const el = await fixture(html`
     <auro-avatar code="psp"></auro-avatar>
@@ -60,6 +82,10 @@ describe("auro-avatar", () => {
   });
 
   it("sets auro-avatar with default fallback when using invalid airport code", async () => {
+    // Simulate the server reporting the airport image as missing, so the component
+    // falls back to the generic partner image.
+    urlStatus = 404;
+
     const el = await fixture(html`
       <auro-avatar code="invalid"></auro-avatar>
     `);
