@@ -17,7 +17,17 @@ import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The `auro-avatar` element provides a container to display an avatar image.
+ * Displays a round image that represents a city, an airport, or a user profile.
+ *
+ * **Key capabilities**
+ * - **Airport images**: Set `code` to an airport code to show that airport's image, or a default partner image when it has none.
+ * - **Custom images**: Set `img` to the URL of your own image.
+ * - **Sizes**: Set `type` to `sm` or `md` for a smaller avatar; it's large by default.
+ * - **Accessibility**: Set `ariaVisible` and `alt` to make the image visible to screen readers, which skip it by default.
+ *
+ * @example
+ * <auro-avatar code="sea"></auro-avatar>
+ * @summary A round avatar image for airports, cities, or custom images, in three sizes.
  * @customElement auro-avatar
  *
  * @slot display - Text displayed below the tail logo. Only rendered when the deprecated `tail` attribute is set.
@@ -52,7 +62,8 @@ export class AuroAvatar extends LitElement {
       // ...super.properties,
 
       /**
-       * Provide string for element alt text.
+       * Sets the text that screen readers announce for the image, such as "Sunrise over Seattle" (the image's `alt`). Screen readers use it only when `ariaVisible` is set.
+       * @default ""
        */
       alt: {
         type: String,
@@ -60,7 +71,7 @@ export class AuroAvatar extends LitElement {
       },
 
       /**
-       * If true, reveals content to screen reader.
+       * Makes the image visible to screen readers, which skip it by default. Set `alt` as well, so screen readers have text to announce.
        */
       ariaVisible: {
         type: Boolean,
@@ -68,7 +79,7 @@ export class AuroAvatar extends LitElement {
       },
 
       /**
-       * Provide airport code for requested airport image.
+       * Sets the airport whose image the avatar shows, using its airport code, such as `sea`. When the airport has no image, the avatar shows a default partner image. Takes priority over `img`.
        */
       code: {
         type: String,
@@ -76,7 +87,7 @@ export class AuroAvatar extends LitElement {
       },
 
       /**
-       * Provide location or URL for image to be used.
+       * Sets the URL of the image to show, such as `https://example.com/photo.jpg` (the image's `src`). When `code` is set, the avatar ignores `img`.
        */
       img: {
         type: String,
@@ -84,7 +95,8 @@ export class AuroAvatar extends LitElement {
       },
 
       /**
-       * **DEPRECATED**: Provides a tail logo for the requested airline. Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead.
+       * Deprecated: Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead.
+       * Sets the airline code, such as `JL`, of the tail logo to show. The `display` slot text appears below the logo.
        * @deprecated Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead.
        */
       tail: {
@@ -93,7 +105,7 @@ export class AuroAvatar extends LitElement {
       },
 
       /**
-       * Modifiers for size of avatar.
+       * Sets the size of the avatar. Use `sm` for the smallest, `md` for medium, or leave it unset for the largest. A smaller size also loads a smaller airport image when you use `code`.
        * @type {'sm' | 'md'}
        */
       type: {
@@ -108,11 +120,11 @@ export class AuroAvatar extends LitElement {
   }
 
   /**
-   * This will register this element with the browser.
-   * @param {string} [name="auro-avatar"] - The name of the element that you want to register.
+   * Registers the element with the browser under a tag name.
+   * @param {string} [name="auro-avatar"] - The tag name to register the element under.
    *
    * @example
-   * AuroAvatar.register("custom-avatar") // this will register this element to <custom-avatar/>
+   * AuroAvatar.register("custom-avatar") // Registers the element as <custom-avatar>.
    *
    */
   static register(name = "auro-avatar") {
@@ -126,7 +138,7 @@ export class AuroAvatar extends LitElement {
 
   /**
    * @private
-   * @returns {string} - Returns true or false.
+   * @returns {string} - The value for the image's `aria-hidden` attribute: "false" when `ariaVisible` is set, otherwise "true".
    */
   aria() {
     return this.ariaVisible ? "false" : "true";
@@ -134,8 +146,8 @@ export class AuroAvatar extends LitElement {
 
   /**
    * @private
-   * @param {string} type - Determines size of image asset to show.
-   * @returns {string} - Returns true or false.
+   * @param {string} type - The avatar size, `sm` or `md`. Any other value gives the largest size.
+   * @returns {string} - The image size to request, such as "180x180".
    */
   imageSize(type) {
     let output = "";
@@ -158,7 +170,7 @@ export class AuroAvatar extends LitElement {
   /**
    * @private
    * @param {string} url - The URL to get status for.
-   * @returns {number} - Returns an http status code.
+   * @returns {number} - The HTTP status code of the response, or 404 when the request fails.
    */
   urlStatus(url) {
     try {
@@ -176,8 +188,8 @@ export class AuroAvatar extends LitElement {
 
   /**
    * @private
-   * @param {string} imageType - Passed in value to determine image output.
-   * @returns {string} - Returns pre-defined string or free text.
+   * @param {string} imageType - The airport code, if one is set.
+   * @returns {string} - The URL of the image to show: the airport image, the `img` URL, or the default partner image.
    */
   imageSrc(imageType) {
     let url = `https://resource.alaskaair.net/-/media/Images/common-assets/destinations/${this.imageSize(this.type)}/partner`;
@@ -203,7 +215,7 @@ export class AuroAvatar extends LitElement {
 
   /**
    * @private
-   * @returns {string} - Returns pre-defined DOM string.
+   * @returns {import("lit").TemplateResult} - The template to render: the tail logo and `display` slot when `tail` is set, otherwise the image.
    */
   template() {
     if (this.tail) {
