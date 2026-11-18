@@ -16,11 +16,11 @@
 
 </auro-accordion>
 
-## Property & Attribute Examples
+## Property and attribute examples
 
-### Accessibility Options
+### Accessibility options
 
-The `auro-avatar` element is hidden from screen readers by default. The placement of altText using the `alt` attribute in conjunction with the `ariaVisible` attribute will make the avatar visible to screen readers.
+The `auro-avatar` element is hidden from screen readers by default. To make the avatar visible to screen readers, set the `ariaVisible` attribute and add `alt` text that describes the image.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/accessibility.html) -->
@@ -35,9 +35,9 @@ The `auro-avatar` element is hidden from screen readers by default. The placemen
 
 </auro-accordion>
 
-### Airport Code
+### Airport code
 
-Use the `code` attribute to specify the airport code for the desired avatar image. The component will render the corresponding avatar image based on the provided airport code.
+Use the `code` attribute to show the image for an airport, such as `sea`. When the airport has no image, the avatar shows the default partner image.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/code.html) -->
@@ -52,9 +52,9 @@ Use the `code` attribute to specify the airport code for the desired avatar imag
 
 </auro-accordion>
 
-### Custom Images
+### Custom images
 
-The `auro-avatar` element supports placement of custom images using the `img` attribute.
+Use the `img` attribute to show your own image. When `code` is set, the avatar ignores `img`.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom-image.html) -->
@@ -69,9 +69,9 @@ The `auro-avatar` element supports placement of custom images using the `img` at
 
 </auro-accordion>
 
-### Size Options
+### Size options
 
-The `auro-avatar` element supports a `sm`, `md` avatar types that determines the size of the image asset delivered, using the `type` attribute. The assumed default is `lg`.
+Use the `type` attribute to set the size of the avatar: `sm`, `md`, or the default large size. When you use `code`, a smaller size also loads a smaller image file.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/size.html) -->
@@ -86,11 +86,11 @@ The `auro-avatar` element supports a `sm`, `md` avatar types that determines the
 
 </auro-accordion>
 
-## Common Usage Patterns & Functional Examples
+## Common usage patterns
 
-### Fallback Images
+### Fallback images
 
-A fallback image will be used in the `auro-avatar` element if a `code` attribute value results in an avatar image that fails to load.
+When the airport image for a `code` isn't available, the avatar shows a default partner image instead.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/fallback.html) -->
@@ -105,9 +105,9 @@ A fallback image will be used in the `auro-avatar` element if a `code` attribute
 
 </auro-accordion>
 
-## Restyle Component with CSS Variables
+## Restyle with CSS custom properties
 
-The component may be restyled by changing the values of the following token(s).
+Restyle the component by changing the values of the following tokens.
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/styles/tokens.scss) -->
 <!-- AURO-GENERATED-CONTENT:END -->
