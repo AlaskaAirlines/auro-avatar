@@ -30,7 +30,7 @@ import tokensCss from "./styles/tokens.scss";
  * @summary A round avatar image for airports, cities, or custom images, in three sizes.
  * @customElement auro-avatar
  *
- * @slot display - Text displayed below the tail logo. Only rendered when the deprecated `tail` attribute is set.
+ * @slot display - Deprecated: Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead. Text displayed below the tail logo. Only rendered when the `tail` attribute is set.
  */
 export class AuroAvatar extends LitElement {
   constructor() {
