@@ -27,6 +27,6 @@ Displays a round image that represents a city, an airport, or a user profile.
 
 ### Slots
 
-| Name    | Description                                                                                    |
-| ------- | ---------------------------------------------------------------------------------------------- |
-| display | Text displayed below the tail logo. Only rendered when the deprecated `tail` attribute is set. |
+| Name    | Description                                                                                                                                                                         |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| display | Deprecated: Use the [auro-tail](https://github.com/AlaskaAirlines/auro-tail) component instead. Text displayed below the tail logo. Only rendered when the `tail` attribute is set. |
